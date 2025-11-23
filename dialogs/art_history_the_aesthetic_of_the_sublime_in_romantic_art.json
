@@ -1,0 +1,397 @@
+{
+  "meta": {
+    "area": "Art History",
+    "title": "The Aesthetic of the Sublime in Romantic Art",
+    "desc": "Analyzes representations of the sublime and their emotional impact in Romantic works.",
+    "duration_minutes": 12,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Introduction to the Sublime",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Understanding the Sublime",
+            "bullets": [
+              "Definition of the Sublime",
+              "Historical context in Romanticism",
+              "Emotional and aesthetic dimensions"
+            ]
+          }
+        },
+        {
+          "layout": "Quote",
+          "content": {
+            "quote": "The sublime is the experience of beauty that overwhelms the senses.",
+            "author": "Immanuel Kant"
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Key Artists and Works",
+      "slides": [
+        {
+          "layout": "SplitLeftImage",
+          "content": {
+            "title": "Caspar David Friedrich",
+            "image": "Friedrichs_Wanderer_above_the_sea_of_fog.jpg",
+            "text": "Notable work: 'Wanderer above the Sea of Fog'"
+          }
+        },
+        {
+          "layout": "SplitRightImage",
+          "content": {
+            "title": "J.M.W. Turner",
+            "image": "Turner_The_Slave_Ship.jpg",
+            "text": "Notable work: 'The Slave Ship'"
+          }
+        },
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Other Influential Artists",
+            "bullets": [
+              "John Constable",
+              "Francisco Goya",
+              "Eugène Delacroix"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Impact and Legacy",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Cultural Impact",
+            "bullets": [
+              "Influence on later art movements",
+              "Connection to Romantic literature",
+              "Modern interpretations of the Sublime"
+            ]
+          }
+        },
+        {
+          "layout": "FullImage",
+          "content": {
+            "image": "Modern_Sublime_Art.jpg",
+            "caption": "Contemporary art reflecting the Sublime"
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Introduction to the Sublime",
+      "prompt": "Concept of the sublime in Romantic art, diagram, structured layout",
+      "style_tag": "diagram"
+    },
+    {
+      "agenda_title": "Key Artists and Works",
+      "prompt": "Famous Romantic artists and their notable works, flat, organized presentation",
+      "style_tag": "flat"
+    },
+    {
+      "agenda_title": "Impact and Legacy",
+      "prompt": "Influence of the sublime in modern art, photo, engaging composition",
+      "style_tag": "photo"
+    }
+  ],
+  "agenda_titles": [
+    "Introduction to the Sublime",
+    "Key Artists and Works",
+    "Impact and Legacy"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 12-minute English presentation titled 'The Aesthetic of the Sublime in Romantic Art'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"Art History\",\"topic_desc\":\"Analyzes representations of the sublime and their emotional impact in Romantic works.\",\"images\":[{\"agenda_title\":\"Introduction to the Sublime\",\"prompt\":\"Concept of the sublime in Romantic art, diagram, structured layout\",\"style_tag\":\"diagram\"},{\"agenda_title\":\"Key Artists and Works\",\"prompt\":\"Famous Romantic artists and their notable works, flat, organized presentation\",\"style_tag\":\"flat\"},{\"agenda_title\":\"Impact and Legacy\",\"prompt\":\"Influence of the sublime in modern art, photo, engaging composition\",\"style_tag\":\"photo\"}],\"duration_minutes\":12,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "The Aesthetic of the Sublime in Romantic Art"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 3 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Introduction to the Sublime",
+              "Key Artists and Works",
+              "Impact and Legacy"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to the Sublime' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Introduction to the Sublime",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to the Sublime' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Introduction to the Sublime",
+            "layout": "Quote"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Key Artists and Works' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Key Artists and Works",
+            "layout": "SplitLeftImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 4,
+            "prompt": "Famous Romantic artists and their notable works, flat, organized presentation"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Key Artists and Works' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Key Artists and Works",
+            "layout": "SplitRightImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 5,
+            "prompt": "Famous Romantic artists and their notable works, flat, organized presentation"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Key Artists and Works' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 5,
+            "title": "Key Artists and Works",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Impact and Legacy' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 6,
+            "title": "Impact and Legacy",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Impact and Legacy' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 7,
+            "title": "Impact and Legacy",
+            "layout": "FullImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 8,
+            "prompt": "Influence of the sublime in modern art, photo, engaging composition"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bullet points to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Definition of the sublime in art",
+              "Historical context in the Romantic period",
+              "Contrast with beauty and the picturesque"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bulleted points to slide 4."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 4,
+            "type": "bullets",
+            "items": [
+              "Caspar David Friedrich's landscapes",
+              "J.M.W. Turner’s atmospheric effects",
+              "John Constable's emotional depth"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 7."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 7,
+            "type": "bullets",
+            "items": [
+              "Influence on later art movements",
+              "Connection to literature and philosophy",
+              "Continued relevance in contemporary discussions"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
