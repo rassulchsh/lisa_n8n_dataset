@@ -1,0 +1,278 @@
+{
+  "meta": {
+    "area": "Computer Science",
+    "title": "Cybersecurity Threat Intelligence",
+    "desc": "Discusses strategies for identifying and mitigating emerging cybersecurity threats.",
+    "duration_minutes": 8,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Introduction to Cybersecurity Threat Intelligence",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "What is Cybersecurity Threat Intelligence?",
+            "bullets": [
+              "Definition and importance",
+              "Types of threat intelligence",
+              "Role in cybersecurity strategy"
+            ]
+          }
+        },
+        {
+          "layout": "TwoColumn",
+          "content": {
+            "left": {
+              "title": "Key Concepts",
+              "bullets": [
+                "Indicators of Compromise (IoCs)",
+                "Threat actors",
+                "Attack vectors"
+              ]
+            },
+            "right": {
+              "title": "Benefits of Threat Intelligence",
+              "bullets": [
+                "Proactive defense",
+                "Incident response enhancement",
+                "Risk management"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Sources and Methods of Threat Intelligence Gathering",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Sources of Threat Intelligence",
+            "bullets": [
+              "Open-source intelligence (OSINT)",
+              "Commercial threat feeds",
+              "Internal data and logs"
+            ]
+          }
+        },
+        {
+          "layout": "SplitLeftImage",
+          "content": {
+            "image": "threat_intelligence_sources.png",
+            "title": "Methods of Gathering Threat Intelligence",
+            "bullets": [
+              "Data mining and analysis",
+              "Human intelligence (HUMINT)",
+              "Automated tools and platforms"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Introduction to Cybersecurity Threat Intelligence",
+      "prompt": "Overview of cybersecurity threat intelligence concepts, diagram, structured layout",
+      "style_tag": "diagram"
+    },
+    {
+      "agenda_title": "Sources and Methods of Threat Intelligence Gathering",
+      "prompt": "Various sources and methods for gathering threat intelligence, flat, organized flowchart",
+      "style_tag": "flat"
+    }
+  ],
+  "agenda_titles": [
+    "Introduction to Cybersecurity Threat Intelligence",
+    "Sources and Methods of Threat Intelligence Gathering"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 8-minute English presentation titled 'Cybersecurity Threat Intelligence'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"Computer Science\",\"topic_desc\":\"Discusses strategies for identifying and mitigating emerging cybersecurity threats.\",\"images\":[{\"agenda_title\":\"Introduction to Cybersecurity Threat Intelligence\",\"prompt\":\"Overview of cybersecurity threat intelligence concepts, diagram, structured layout\",\"style_tag\":\"diagram\"},{\"agenda_title\":\"Sources and Methods of Threat Intelligence Gathering\",\"prompt\":\"Various sources and methods for gathering threat intelligence, flat, organized flowchart\",\"style_tag\":\"flat\"}],\"duration_minutes\":8,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "Cybersecurity Threat Intelligence"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 2 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Introduction to Cybersecurity Threat Intelligence",
+              "Sources and Methods of Threat Intelligence Gathering"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Cybersecurity Threat Intelligence' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Introduction to Cybersecurity Threat Intelligence",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Cybersecurity Threat Intelligence' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Introduction to Cybersecurity Threat Intelligence",
+            "layout": "TwoColumn"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Sources and Methods of Threat Intelligence Gathering' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Sources and Methods of Threat Intelligence Gathering",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Sources and Methods of Threat Intelligence Gathering' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Sources and Methods of Threat Intelligence Gathering",
+            "layout": "SplitLeftImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 5,
+            "prompt": "Various sources and methods for gathering threat intelligence, flat, organized flowchart"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bullet points to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Definition and importance of threat intelligence",
+              "Types of threat intelligence: strategic, tactical, operational",
+              "Role in proactive cybersecurity measures"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bullet points to slide 4."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 4,
+            "type": "bullets",
+            "items": [
+              "Open-source intelligence (OSINT) and its applications",
+              "Human intelligence (HUMINT) in cybersecurity",
+              "Automated tools for threat data collection",
+              "Collaboration with industry and government entities"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
