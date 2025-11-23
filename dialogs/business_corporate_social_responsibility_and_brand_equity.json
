@@ -1,0 +1,409 @@
+{
+  "meta": {
+    "area": "Business",
+    "title": "Corporate Social Responsibility and Brand Equity",
+    "desc": "Explores the relationship between CSR initiatives and brand value perception.",
+    "duration_minutes": 15,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Introduction to Corporate Social Responsibility (CSR)",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "What is CSR?",
+            "bullets": [
+              "Definition of CSR",
+              "Historical context",
+              "Importance in modern business"
+            ]
+          }
+        },
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Key Components of CSR",
+            "bullets": [
+              "Environmental sustainability",
+              "Social equity",
+              "Economic responsibility"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Impact of CSR on Brand Equity",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "CSR and Consumer Perception",
+            "bullets": [
+              "Influence on brand loyalty",
+              "Consumer trust and credibility",
+              "Differentiation in competitive markets"
+            ]
+          }
+        },
+        {
+          "layout": "SplitLeftImage",
+          "content": {
+            "title": "Case Studies",
+            "image": "case_study_image.jpg",
+            "text": "Examples of brands successfully leveraging CSR"
+          }
+        },
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Measuring Brand Equity",
+            "bullets": [
+              "Metrics for assessing brand value",
+              "Role of CSR in brand equity measurement",
+              "Long-term vs. short-term impacts"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Challenges and Future Directions",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Challenges in Implementing CSR",
+            "bullets": [
+              "Balancing profit and purpose",
+              "Greenwashing concerns",
+              "Stakeholder engagement"
+            ]
+          }
+        },
+        {
+          "layout": "Quote",
+          "content": {
+            "title": "Future of CSR",
+            "quote": "CSR is not a cost, but an investment in the future."
+          }
+        },
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Emerging Trends",
+            "bullets": [
+              "Digital transformation in CSR",
+              "Increased transparency",
+              "Focus on social justice"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Introduction to Corporate Social Responsibility (CSR)",
+      "prompt": "Overview of CSR principles and practices, diagram, flowchart layout",
+      "style_tag": "diagram"
+    },
+    {
+      "agenda_title": "Impact of CSR on Brand Equity",
+      "prompt": "Relationship between CSR initiatives and brand equity, flat design, infographic style",
+      "style_tag": "flat"
+    },
+    {
+      "agenda_title": "Challenges and Future Directions",
+      "prompt": "Key challenges in CSR implementation and future trends, chalk style, mind map layout",
+      "style_tag": "chalk"
+    }
+  ],
+  "agenda_titles": [
+    "Introduction to Corporate Social Responsibility (CSR)",
+    "Impact of CSR on Brand Equity",
+    "Challenges and Future Directions"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 15-minute English presentation titled 'Corporate Social Responsibility and Brand Equity'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"Business\",\"topic_desc\":\"Explores the relationship between CSR initiatives and brand value perception.\",\"images\":[{\"agenda_title\":\"Introduction to Corporate Social Responsibility (CSR)\",\"prompt\":\"Overview of CSR principles and practices, diagram, flowchart layout\",\"style_tag\":\"diagram\"},{\"agenda_title\":\"Impact of CSR on Brand Equity\",\"prompt\":\"Relationship between CSR initiatives and brand equity, flat design, infographic style\",\"style_tag\":\"flat\"},{\"agenda_title\":\"Challenges and Future Directions\",\"prompt\":\"Key challenges in CSR implementation and future trends, chalk style, mind map layout\",\"style_tag\":\"chalk\"}],\"duration_minutes\":15,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "Corporate Social Responsibility and Brand Equity"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 3 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Introduction to Corporate Social Responsibility (CSR)",
+              "Impact of CSR on Brand Equity",
+              "Challenges and Future Directions"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Corporate Social Responsibility (CSR)' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Introduction to Corporate Social Responsibility (CSR)",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Corporate Social Responsibility (CSR)' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Introduction to Corporate Social Responsibility (CSR)",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Impact of CSR on Brand Equity' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Impact of CSR on Brand Equity",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Impact of CSR on Brand Equity' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Impact of CSR on Brand Equity",
+            "layout": "SplitLeftImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 5,
+            "prompt": "Relationship between CSR initiatives and brand equity, flat design, infographic style"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Impact of CSR on Brand Equity' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 5,
+            "title": "Impact of CSR on Brand Equity",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Challenges and Future Directions' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 6,
+            "title": "Challenges and Future Directions",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Challenges and Future Directions' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 7,
+            "title": "Challenges and Future Directions",
+            "layout": "Quote"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Challenges and Future Directions' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 8,
+            "title": "Challenges and Future Directions",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bullet points to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Definition of CSR and its relevance",
+              "Historical context and evolution of CSR practices",
+              "Key drivers for CSR adoption in corporations"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bullet points to slide 4."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 4,
+            "type": "bullets",
+            "items": [
+              "Relationship between CSR initiatives and consumer perception",
+              "Influence of CSR on brand loyalty and trust",
+              "Case studies demonstrating CSR's effect on brand equity"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bullet points to slide 7."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 7,
+            "type": "bullets",
+            "items": [
+              "Common obstacles in implementing effective CSR strategies",
+              "Emerging trends in CSR and brand equity integration",
+              "Recommendations for enhancing CSR impact on brand value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
