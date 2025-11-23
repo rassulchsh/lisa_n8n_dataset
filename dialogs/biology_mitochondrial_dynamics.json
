@@ -1,0 +1,403 @@
+{
+  "meta": {
+    "area": "Biology",
+    "title": "Mitochondrial Dynamics",
+    "desc": "Examines the role of mitochondria in cellular metabolism and disease pathogenesis.",
+    "duration_minutes": 20,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Introduction to Mitochondrial Dynamics",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Overview of Mitochondrial Dynamics",
+            "bullets": [
+              "Definition of mitochondrial dynamics",
+              "Importance in cellular function",
+              "Key processes: fusion and fission"
+            ]
+          }
+        },
+        {
+          "layout": "SplitLeftImage",
+          "content": {
+            "title": "Mitochondrial Structure",
+            "image": "mitochondrial_structure_diagram.jpg",
+            "text": "Understanding the basic structure aids in grasping dynamics."
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Mechanisms of Mitochondrial Fusion and Fission",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Fusion Mechanism",
+            "bullets": [
+              "Key proteins involved: MFN1, MFN2, OPA1",
+              "Role in mitochondrial function",
+              "Impact on energy production"
+            ]
+          }
+        },
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Fission Mechanism",
+            "bullets": [
+              "Key proteins involved: DRP1, FIS1",
+              "Importance in cell division",
+              "Role in apoptosis"
+            ]
+          }
+        },
+        {
+          "layout": "FullImage",
+          "content": {
+            "title": "Fusion and Fission Processes",
+            "image": "fusion_fission_processes.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Mitochondrial Dynamics in Disease",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Mitochondrial Dysfunction",
+            "bullets": [
+              "Link to neurodegenerative diseases",
+              "Role in metabolic disorders",
+              "Impact on aging"
+            ]
+          }
+        },
+        {
+          "layout": "SplitRightImage",
+          "content": {
+            "title": "Therapeutic Approaches",
+            "image": "therapeutic_interventions.jpg",
+            "text": "Exploring potential treatments targeting dynamics."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Introduction to Mitochondrial Dynamics",
+      "prompt": "Mitochondrial dynamics overview diagram",
+      "style_tag": "diagram"
+    },
+    {
+      "agenda_title": "Mechanisms of Mitochondrial Fusion and Fission",
+      "prompt": "Fusion and fission processes of mitochondria diagram",
+      "style_tag": "diagram"
+    },
+    {
+      "agenda_title": "Mitochondrial Dynamics in Disease",
+      "prompt": "Impact of mitochondrial dynamics on disease diagram",
+      "style_tag": "diagram"
+    }
+  ],
+  "agenda_titles": [
+    "Introduction to Mitochondrial Dynamics",
+    "Mechanisms of Mitochondrial Fusion and Fission",
+    "Mitochondrial Dynamics in Disease"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 20-minute English presentation titled 'Mitochondrial Dynamics'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"Biology\",\"topic_desc\":\"Examines the role of mitochondria in cellular metabolism and disease pathogenesis.\",\"images\":[{\"agenda_title\":\"Introduction to Mitochondrial Dynamics\",\"prompt\":\"Mitochondrial dynamics overview diagram\",\"style_tag\":\"diagram\"},{\"agenda_title\":\"Mechanisms of Mitochondrial Fusion and Fission\",\"prompt\":\"Fusion and fission processes of mitochondria diagram\",\"style_tag\":\"diagram\"},{\"agenda_title\":\"Mitochondrial Dynamics in Disease\",\"prompt\":\"Impact of mitochondrial dynamics on disease diagram\",\"style_tag\":\"diagram\"}],\"duration_minutes\":20,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "Mitochondrial Dynamics"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 3 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Introduction to Mitochondrial Dynamics",
+              "Mechanisms of Mitochondrial Fusion and Fission",
+              "Mitochondrial Dynamics in Disease"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Mitochondrial Dynamics' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Introduction to Mitochondrial Dynamics",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Mitochondrial Dynamics' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Introduction to Mitochondrial Dynamics",
+            "layout": "SplitLeftImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 3,
+            "prompt": "Mitochondrial dynamics overview diagram"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Mechanisms of Mitochondrial Fusion and Fission' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Mechanisms of Mitochondrial Fusion and Fission",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Mechanisms of Mitochondrial Fusion and Fission' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Mechanisms of Mitochondrial Fusion and Fission",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Mechanisms of Mitochondrial Fusion and Fission' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 5,
+            "title": "Mechanisms of Mitochondrial Fusion and Fission",
+            "layout": "FullImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 6,
+            "prompt": "Fusion and fission processes of mitochondria diagram"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Mitochondrial Dynamics in Disease' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 6,
+            "title": "Mitochondrial Dynamics in Disease",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Mitochondrial Dynamics in Disease' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 7,
+            "title": "Mitochondrial Dynamics in Disease",
+            "layout": "SplitRightImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 8,
+            "prompt": "Impact of mitochondrial dynamics on disease diagram"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Definition of mitochondrial dynamics",
+              "Importance in cellular metabolism",
+              "Role in apoptosis and cell survival"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bulleted points to slide 4."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 4,
+            "type": "bullets",
+            "items": [
+              "Key proteins involved in fusion (e.g., MFN1, MFN2)",
+              "Key proteins involved in fission (e.g., DRP1)",
+              "Regulation of mitochondrial morphology",
+              "Impact on mitochondrial function and health"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bullet points to slide 7."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 7,
+            "type": "bullets",
+            "items": [
+              "Association with neurodegenerative diseases",
+              "Role in metabolic disorders",
+              "Potential therapeutic targets",
+              "Current research trends and findings"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
