@@ -1,0 +1,378 @@
+{
+  "meta": {
+    "area": "Art History",
+    "title": "Feminist Art Critique in the 1970s",
+    "desc": "Explores the emergence of feminist perspectives in art criticism and practice.",
+    "duration_minutes": 10,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Historical Context of Feminist Art in the 1970s",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Historical Context",
+            "bullets": [
+              "Emergence of second-wave feminism",
+              "Cultural and political climate",
+              "Influence of civil rights movements"
+            ]
+          }
+        },
+        {
+          "layout": "TwoColumn",
+          "content": {
+            "left": {
+              "title": "Key Events",
+              "bullets": [
+                "1972: First Feminist Art Program",
+                "1975: Women's Art Movement"
+              ]
+            },
+            "right": {
+              "title": "Artistic Responses",
+              "bullets": [
+                "Challenging traditional narratives",
+                "Reclaiming women's representation"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Key Artists and Their Contributions",
+      "slides": [
+        {
+          "layout": "SplitLeftImage",
+          "content": {
+            "image": "image_of_judy_chicago_artwork.jpg",
+            "text": {
+              "title": "Judy Chicago",
+              "bullets": [
+                "Creator of 'The Dinner Party'",
+                "Pioneered collaborative art practices"
+              ]
+            }
+          }
+        },
+        {
+          "layout": "SplitRightImage",
+          "content": {
+            "image": "image_of_carrie_mae_weems_artwork.jpg",
+            "text": {
+              "title": "Carrie Mae Weems",
+              "bullets": [
+                "Explored race and gender",
+                "Used photography to challenge stereotypes"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Impact and Legacy of Feminist Art Critique",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Impact and Legacy",
+            "bullets": [
+              "Influenced contemporary art practices",
+              "Established feminist art history",
+              "Continues to inspire activism"
+            ]
+          }
+        },
+        {
+          "layout": "Quote",
+          "content": {
+            "quote": "\"Feminist art is not just about women; it's about the world we live in.\"",
+            "author": "Unknown"
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Historical Context of Feminist Art in the 1970s",
+      "prompt": "Timeline of feminist art movements + diagram + chronological layout",
+      "style_tag": "diagram"
+    },
+    {
+      "agenda_title": "Key Artists and Their Contributions",
+      "prompt": "Portraits of key feminist artists + flat + grid layout",
+      "style_tag": "flat"
+    },
+    {
+      "agenda_title": "Impact and Legacy of Feminist Art Critique",
+      "prompt": "Infographic on the legacy of feminist art + chalk + layered composition",
+      "style_tag": "chalk"
+    }
+  ],
+  "agenda_titles": [
+    "Historical Context of Feminist Art in the 1970s",
+    "Key Artists and Their Contributions",
+    "Impact and Legacy of Feminist Art Critique"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 10-minute English presentation titled 'Feminist Art Critique in the 1970s'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"Art History\",\"topic_desc\":\"Explores the emergence of feminist perspectives in art criticism and practice.\",\"images\":[{\"agenda_title\":\"Historical Context of Feminist Art in the 1970s\",\"prompt\":\"Timeline of feminist art movements + diagram + chronological layout\",\"style_tag\":\"diagram\"},{\"agenda_title\":\"Key Artists and Their Contributions\",\"prompt\":\"Portraits of key feminist artists + flat + grid layout\",\"style_tag\":\"flat\"},{\"agenda_title\":\"Impact and Legacy of Feminist Art Critique\",\"prompt\":\"Infographic on the legacy of feminist art + chalk + layered composition\",\"style_tag\":\"chalk\"}],\"duration_minutes\":10,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "Feminist Art Critique in the 1970s"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 3 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Historical Context of Feminist Art in the 1970s",
+              "Key Artists and Their Contributions",
+              "Impact and Legacy of Feminist Art Critique"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Historical Context of Feminist Art in the 1970s' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Historical Context of Feminist Art in the 1970s",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Historical Context of Feminist Art in the 1970s' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Historical Context of Feminist Art in the 1970s",
+            "layout": "TwoColumn"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Key Artists and Their Contributions' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Key Artists and Their Contributions",
+            "layout": "SplitLeftImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 4,
+            "prompt": "Portraits of key feminist artists + flat + grid layout"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Key Artists and Their Contributions' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Key Artists and Their Contributions",
+            "layout": "SplitRightImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 5,
+            "prompt": "Portraits of key feminist artists + flat + grid layout"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Impact and Legacy of Feminist Art Critique' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 5,
+            "title": "Impact and Legacy of Feminist Art Critique",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Impact and Legacy of Feminist Art Critique' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 6,
+            "title": "Impact and Legacy of Feminist Art Critique",
+            "layout": "Quote"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bullet points to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Emergence of feminist movements in the 1960s",
+              "Influence of civil rights and counterculture",
+              "Response to male-dominated art institutions"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bulleted points to slide 4."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 4,
+            "type": "bullets",
+            "items": [
+              "Judy Chicago's 'The Dinner Party'",
+              "Cindy Sherman's photography series",
+              "Barbara Kruger's text-based works"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bullet points to slide 6."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 6,
+            "type": "bullets",
+            "items": [
+              "Challenged traditional art narratives",
+              "Increased visibility for women artists",
+              "Influenced contemporary feminist discourse"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
