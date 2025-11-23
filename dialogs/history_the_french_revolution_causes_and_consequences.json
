@@ -1,0 +1,384 @@
+{
+  "meta": {
+    "area": "History",
+    "title": "The French Revolution: Causes and Consequences",
+    "desc": "Explores the social, economic, and political factors that triggered revolutionary change.",
+    "duration_minutes": 15,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Causes of the French Revolution",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Economic Factors",
+            "bullets": [
+              "High taxation on the Third Estate",
+              "Financial crisis due to wars",
+              "Rising bread prices"
+            ]
+          }
+        },
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Social Inequality",
+            "bullets": [
+              "Estates system: Clergy, Nobility, Commoners",
+              "Discontent among the Third Estate",
+              "Influence of Enlightenment ideas"
+            ]
+          }
+        },
+        {
+          "layout": "TwoColumn",
+          "content": {
+            "left": {
+              "title": "Political Factors",
+              "bullets": [
+                "Weakness of Louis XVI",
+                "Failure of reforms",
+                "Formation of the National Assembly"
+              ]
+            },
+            "right": {
+              "title": "Cultural Factors",
+              "bullets": [
+                "Spread of revolutionary literature",
+                "Role of salons",
+                "Impact of the American Revolution"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Consequences of the French Revolution",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Immediate Consequences",
+            "bullets": [
+              "Abolition of the monarchy",
+              "Establishment of the Republic",
+              "Rise of radical groups"
+            ]
+          }
+        },
+        {
+          "layout": "SplitLeftImage",
+          "content": {
+            "title": "Long-term Consequences",
+            "image": "image_of_revolutionary_art.jpg",
+            "bullets": [
+              "Spread of nationalism",
+              "Influence on future revolutions",
+              "Changes in social structures"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Legacy and Historical Significance",
+      "slides": [
+        {
+          "layout": "Quote",
+          "content": {
+            "quote": "The French Revolution was a turning point in history.",
+            "author": "Unknown"
+          }
+        },
+        {
+          "layout": "FullImage",
+          "content": {
+            "image": "image_of_french_revolution.jpg",
+            "caption": "The enduring impact of the French Revolution."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Causes of the French Revolution",
+      "prompt": "Key factors leading to the French Revolution, diagram, flowchart composition",
+      "style_tag": "diagram"
+    },
+    {
+      "agenda_title": "Consequences of the French Revolution",
+      "prompt": "Major outcomes of the French Revolution, flat design, infographic composition",
+      "style_tag": "flat"
+    },
+    {
+      "agenda_title": "Legacy and Historical Significance",
+      "prompt": "Impact of the French Revolution on modern society, photo, collage composition",
+      "style_tag": "photo"
+    }
+  ],
+  "agenda_titles": [
+    "Causes of the French Revolution",
+    "Consequences of the French Revolution",
+    "Legacy and Historical Significance"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 15-minute English presentation titled 'The French Revolution: Causes and Consequences'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"History\",\"topic_desc\":\"Explores the social, economic, and political factors that triggered revolutionary change.\",\"images\":[{\"agenda_title\":\"Causes of the French Revolution\",\"prompt\":\"Key factors leading to the French Revolution, diagram, flowchart composition\",\"style_tag\":\"diagram\"},{\"agenda_title\":\"Consequences of the French Revolution\",\"prompt\":\"Major outcomes of the French Revolution, flat design, infographic composition\",\"style_tag\":\"flat\"},{\"agenda_title\":\"Legacy and Historical Significance\",\"prompt\":\"Impact of the French Revolution on modern society, photo, collage composition\",\"style_tag\":\"photo\"}],\"duration_minutes\":15,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "The French Revolution: Causes and Consequences"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 3 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Causes of the French Revolution",
+              "Consequences of the French Revolution",
+              "Legacy and Historical Significance"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Causes of the French Revolution' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Causes of the French Revolution",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Causes of the French Revolution' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Causes of the French Revolution",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Causes of the French Revolution' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Causes of the French Revolution",
+            "layout": "TwoColumn"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Consequences of the French Revolution' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Consequences of the French Revolution",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Consequences of the French Revolution' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 5,
+            "title": "Consequences of the French Revolution",
+            "layout": "SplitLeftImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 6,
+            "prompt": "Major outcomes of the French Revolution, flat design, infographic composition"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Legacy and Historical Significance' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 6,
+            "title": "Legacy and Historical Significance",
+            "layout": "Quote"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Legacy and Historical Significance' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 7,
+            "title": "Legacy and Historical Significance",
+            "layout": "FullImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 8,
+            "prompt": "Impact of the French Revolution on modern society, photo, collage composition"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Social inequality among estates",
+              "Economic hardship and taxation",
+              "Influence of Enlightenment ideas",
+              "Weak leadership of Louis XVI",
+              "Financial crisis and debt"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 5."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 5,
+            "type": "bullets",
+            "items": [
+              "Abolition of the monarchy",
+              "Rise of radical political factions",
+              "Establishment of the Republic",
+              "Spread of revolutionary ideas across Europe",
+              "Long-term impact on global democracy"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
