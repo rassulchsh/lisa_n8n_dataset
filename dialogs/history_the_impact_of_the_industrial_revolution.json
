@@ -1,0 +1,381 @@
+{
+  "meta": {
+    "area": "History",
+    "title": "The Impact of the Industrial Revolution",
+    "desc": "Analyzes technological advancements and their socio-economic consequences in 18th-19th century Europe.",
+    "duration_minutes": 15,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Overview of the Industrial Revolution",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Definition and Timeline",
+            "bullets": [
+              "Period of major industrialization",
+              "Late 18th to early 19th century",
+              "Key inventions and innovations"
+            ]
+          }
+        },
+        {
+          "layout": "TwoColumn",
+          "content": {
+            "left": {
+              "title": "Key Innovations",
+              "bullets": [
+                "Steam engine",
+                "Spinning jenny",
+                "Power loom"
+              ]
+            },
+            "right": {
+              "title": "Major Industries",
+              "bullets": [
+                "Textiles",
+                "Iron and steel",
+                "Transportation"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Social and Economic Impacts",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Economic Growth",
+            "bullets": [
+              "Increased production capacity",
+              "Rise of factory system",
+              "Expansion of trade"
+            ]
+          }
+        },
+        {
+          "layout": "SplitLeftImage",
+          "content": {
+            "left": {
+              "title": "Social Changes",
+              "bullets": [
+                "Urbanization",
+                "Changes in labor conditions",
+                "Emergence of the working class"
+              ]
+            },
+            "right": {
+              "image": "social_changes_image.jpg"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Environmental Consequences",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Pollution and Resource Depletion",
+            "bullets": [
+              "Air and water pollution",
+              "Deforestation",
+              "Impact on biodiversity"
+            ]
+          }
+        },
+        {
+          "layout": "FullImage",
+          "content": {
+            "image": "environmental_impact_image.jpg",
+            "caption": "Visual representation of industrial pollution"
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Overview of the Industrial Revolution",
+      "prompt": "Timeline of key events in the Industrial Revolution, diagram, horizontal layout",
+      "style_tag": "diagram"
+    },
+    {
+      "agenda_title": "Social and Economic Impacts",
+      "prompt": "Infographic illustrating social changes and economic growth during the Industrial Revolution, flat, vertical layout",
+      "style_tag": "flat"
+    },
+    {
+      "agenda_title": "Environmental Consequences",
+      "prompt": "Chart showing pollution levels and environmental degradation during the Industrial Revolution, diagram, circular layout",
+      "style_tag": "diagram"
+    }
+  ],
+  "agenda_titles": [
+    "Overview of the Industrial Revolution",
+    "Social and Economic Impacts",
+    "Environmental Consequences"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 15-minute English presentation titled 'The Impact of the Industrial Revolution'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"History\",\"topic_desc\":\"Analyzes technological advancements and their socio-economic consequences in 18th-19th century Europe.\",\"images\":[{\"agenda_title\":\"Overview of the Industrial Revolution\",\"prompt\":\"Timeline of key events in the Industrial Revolution, diagram, horizontal layout\",\"style_tag\":\"diagram\"},{\"agenda_title\":\"Social and Economic Impacts\",\"prompt\":\"Infographic illustrating social changes and economic growth during the Industrial Revolution, flat, vertical layout\",\"style_tag\":\"flat\"},{\"agenda_title\":\"Environmental Consequences\",\"prompt\":\"Chart showing pollution levels and environmental degradation during the Industrial Revolution, diagram, circular layout\",\"style_tag\":\"diagram\"}],\"duration_minutes\":15,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "The Impact of the Industrial Revolution"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 3 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Overview of the Industrial Revolution",
+              "Social and Economic Impacts",
+              "Environmental Consequences"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Overview of the Industrial Revolution' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Overview of the Industrial Revolution",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Overview of the Industrial Revolution' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Overview of the Industrial Revolution",
+            "layout": "TwoColumn"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Social and Economic Impacts' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Social and Economic Impacts",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Social and Economic Impacts' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Social and Economic Impacts",
+            "layout": "SplitLeftImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 5,
+            "prompt": "Infographic illustrating social changes and economic growth during the Industrial Revolution, flat, vertical layout"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Environmental Consequences' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 5,
+            "title": "Environmental Consequences",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Environmental Consequences' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 6,
+            "title": "Environmental Consequences",
+            "layout": "FullImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 7,
+            "prompt": "Chart showing pollution levels and environmental degradation during the Industrial Revolution, diagram, circular layout"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Definition and timeline of the Industrial Revolution",
+              "Key technological advancements: steam engine, spinning jenny",
+              "Shift from agrarian to industrial economies"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bulleted points to slide 4."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 4,
+            "type": "bullets",
+            "items": [
+              "Urbanization and population growth in cities",
+              "Changes in labor: rise of factories and wage labor",
+              "Emergence of new social classes: industrial middle class and working class"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bulleted points to slide 6."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 6,
+            "type": "bullets",
+            "items": [
+              "Increased pollution from factories and transportation",
+              "Deforestation and resource depletion",
+              "Long-term effects on climate and ecosystems"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
