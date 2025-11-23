@@ -1,0 +1,292 @@
+{
+  "meta": {
+    "area": "Art History",
+    "title": "Color Theory in Impressionist Painting",
+    "desc": "Discusses the innovative use of color by Impressionist artists to convey light.",
+    "duration_minutes": 8,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Introduction to Color Theory",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Fundamentals of Color Theory",
+            "bullets": [
+              "Primary, Secondary, and Tertiary Colors",
+              "Color Wheel and Relationships",
+              "Warm vs. Cool Colors"
+            ]
+          }
+        },
+        {
+          "layout": "TwoColumn",
+          "content": {
+            "left": {
+              "title": "Color Harmony",
+              "bullets": [
+                "Complementary Colors",
+                "Analogous Colors",
+                "Triadic Colors"
+              ]
+            },
+            "right": {
+              "title": "Color Context",
+              "bullets": [
+                "Influence of Surrounding Colors",
+                "Psychological Effects of Colors"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Application in Impressionist Painting",
+      "slides": [
+        {
+          "layout": "SplitLeftImage",
+          "content": {
+            "left": {
+              "title": "Color Techniques in Impressionism",
+              "bullets": [
+                "Use of Light and Shadow",
+                "Broken Color Technique",
+                "Vibrant Color Palette"
+              ]
+            },
+            "right": {
+              "image": "example_impressionist_painting.jpg"
+            }
+          }
+        },
+        {
+          "layout": "FullImage",
+          "content": {
+            "title": "Impact of Color in Impressionist Works",
+            "image": "famous_impressionist_work.jpg"
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Introduction to Color Theory",
+      "prompt": "Color wheel diagram with primary, secondary, and tertiary colors, diagram, circular layout",
+      "style_tag": "diagram"
+    },
+    {
+      "agenda_title": "Application in Impressionist Painting",
+      "prompt": "Impressionist landscape painting showcasing color blending techniques, photo, full image",
+      "style_tag": "photo"
+    }
+  ],
+  "agenda_titles": [
+    "Introduction to Color Theory",
+    "Application in Impressionist Painting"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 8-minute English presentation titled 'Color Theory in Impressionist Painting'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"Art History\",\"topic_desc\":\"Discusses the innovative use of color by Impressionist artists to convey light.\",\"images\":[{\"agenda_title\":\"Introduction to Color Theory\",\"prompt\":\"Color wheel diagram with primary, secondary, and tertiary colors, diagram, circular layout\",\"style_tag\":\"diagram\"},{\"agenda_title\":\"Application in Impressionist Painting\",\"prompt\":\"Impressionist landscape painting showcasing color blending techniques, photo, full image\",\"style_tag\":\"photo\"}],\"duration_minutes\":8,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "Color Theory in Impressionist Painting"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 2 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Introduction to Color Theory",
+              "Application in Impressionist Painting"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Color Theory' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Introduction to Color Theory",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Color Theory' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Introduction to Color Theory",
+            "layout": "TwoColumn"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Application in Impressionist Painting' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Application in Impressionist Painting",
+            "layout": "SplitLeftImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 4,
+            "prompt": "Impressionist landscape painting showcasing color blending techniques, photo, full image"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Application in Impressionist Painting' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Application in Impressionist Painting",
+            "layout": "FullImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 5,
+            "prompt": "Impressionist landscape painting showcasing color blending techniques, photo, full image"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Definition of color theory in art",
+              "Primary, secondary, and tertiary colors",
+              "Color wheel and its significance",
+              "Warm vs. cool colors",
+              "Color harmony and contrast"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 4."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 4,
+            "type": "bullets",
+            "items": [
+              "Use of light and color in Impressionism",
+              "Influence of natural light on color perception",
+              "Technique of broken color and optical mixing",
+              "Examples from key Impressionist artists",
+              "Emotional impact of color choices"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
