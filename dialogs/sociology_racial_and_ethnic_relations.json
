@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "area": "Sociology",
+    "title": "Racial and Ethnic Relations",
+    "desc": "Examines the dynamics of race and ethnicity in shaping social interactions.",
+    "duration_minutes": 8,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Historical Context of Racial and Ethnic Relations",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Key Historical Events",
+            "bullets": [
+              "Colonialism and its impact",
+              "Civil Rights Movement",
+              "Legislation changes over decades"
+            ]
+          }
+        },
+        {
+          "layout": "TwoColumn",
+          "content": {
+            "left": {
+              "title": "Colonial Era",
+              "bullets": [
+                "Displacement of Indigenous populations",
+                "Transatlantic slave trade"
+              ]
+            },
+            "right": {
+              "title": "Civil Rights Era",
+              "bullets": [
+                "Major legislation: Civil Rights Act",
+                "Influential figures: Martin Luther King Jr."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Contemporary Issues in Racial and Ethnic Relations",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Current Challenges",
+            "bullets": [
+              "Systemic racism",
+              "Immigration policies",
+              "Cultural appropriation"
+            ]
+          }
+        },
+        {
+          "layout": "SplitLeftImage",
+          "content": {
+            "left": {
+              "title": "Protests and Movements",
+              "bullets": [
+                "Black Lives Matter",
+                "Indigenous rights movements"
+              ]
+            },
+            "right": {
+              "image": "protest_image.jpg"
+            }
+          }
+        },
+        {
+          "layout": "Quote",
+          "content": {
+            "quote": "Injustice anywhere is a threat to justice everywhere.",
+            "author": "Martin Luther King Jr."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Historical Context of Racial and Ethnic Relations",
+      "prompt": "Timeline of key events in racial and ethnic relations history, diagram, horizontal layout",
+      "style_tag": "diagram"
+    },
+    {
+      "agenda_title": "Contemporary Issues in Racial and Ethnic Relations",
+      "prompt": "Infographic on current racial and ethnic relations challenges, flat, vertical layout",
+      "style_tag": "flat"
+    }
+  ],
+  "agenda_titles": [
+    "Historical Context of Racial and Ethnic Relations",
+    "Contemporary Issues in Racial and Ethnic Relations"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 8-minute English presentation titled 'Racial and Ethnic Relations'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"Sociology\",\"topic_desc\":\"Examines the dynamics of race and ethnicity in shaping social interactions.\",\"images\":[{\"agenda_title\":\"Historical Context of Racial and Ethnic Relations\",\"prompt\":\"Timeline of key events in racial and ethnic relations history, diagram, horizontal layout\",\"style_tag\":\"diagram\"},{\"agenda_title\":\"Contemporary Issues in Racial and Ethnic Relations\",\"prompt\":\"Infographic on current racial and ethnic relations challenges, flat, vertical layout\",\"style_tag\":\"flat\"}],\"duration_minutes\":8,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "Racial and Ethnic Relations"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 2 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Historical Context of Racial and Ethnic Relations",
+              "Contemporary Issues in Racial and Ethnic Relations"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Historical Context of Racial and Ethnic Relations' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Historical Context of Racial and Ethnic Relations",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Historical Context of Racial and Ethnic Relations' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Historical Context of Racial and Ethnic Relations",
+            "layout": "TwoColumn"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Contemporary Issues in Racial and Ethnic Relations' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Contemporary Issues in Racial and Ethnic Relations",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Contemporary Issues in Racial and Ethnic Relations' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Contemporary Issues in Racial and Ethnic Relations",
+            "layout": "SplitLeftImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 5,
+            "prompt": "Infographic on current racial and ethnic relations challenges, flat, vertical layout"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Contemporary Issues in Racial and Ethnic Relations' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 5,
+            "title": "Contemporary Issues in Racial and Ethnic Relations",
+            "layout": "Quote"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Overview of colonialism and its impact",
+              "Key legislation shaping racial dynamics",
+              "Civil rights movements and their significance"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bulleted points to slide 4."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 4,
+            "type": "bullets",
+            "items": [
+              "Current statistics on racial disparities",
+              "Role of social media in activism",
+              "Impact of immigration policies on communities"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
