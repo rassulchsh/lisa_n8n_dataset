@@ -1,0 +1,398 @@
+{
+  "meta": {
+    "area": "Computer Science",
+    "title": "Machine Learning in Healthcare",
+    "desc": "Examines applications of machine learning for diagnostics and treatment in medical fields.",
+    "duration_minutes": 20,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Introduction to Machine Learning in Healthcare",
+      "slides": [
+        {
+          "layout": "TitleBullets"
+        },
+        {
+          "layout": "TitleOnly"
+        },
+        {
+          "layout": "FullImage"
+        }
+      ]
+    },
+    {
+      "agenda_title": "Applications of Machine Learning in Clinical Settings",
+      "slides": [
+        {
+          "layout": "TitleBullets"
+        },
+        {
+          "layout": "TwoColumn"
+        },
+        {
+          "layout": "SplitLeftImage"
+        }
+      ]
+    },
+    {
+      "agenda_title": "Challenges and Future Directions",
+      "slides": [
+        {
+          "layout": "TitleBullets"
+        },
+        {
+          "layout": "Quote"
+        },
+        {
+          "layout": "SplitRightImage"
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Introduction to Machine Learning in Healthcare",
+      "prompt": "Overview of machine learning principles in healthcare, diagram, structured layout",
+      "style_tag": "diagram"
+    },
+    {
+      "agenda_title": "Applications of Machine Learning in Clinical Settings",
+      "prompt": "Examples of machine learning applications in clinical practice, flat, infographic style",
+      "style_tag": "flat"
+    },
+    {
+      "agenda_title": "Challenges and Future Directions",
+      "prompt": "Key challenges and future trends in healthcare machine learning, chalk, mind map",
+      "style_tag": "chalk"
+    }
+  ],
+  "agenda_titles": [
+    "Introduction to Machine Learning in Healthcare",
+    "Applications of Machine Learning in Clinical Settings",
+    "Challenges and Future Directions"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 20-minute English presentation titled 'Machine Learning in Healthcare'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"Computer Science\",\"topic_desc\":\"Examines applications of machine learning for diagnostics and treatment in medical fields.\",\"images\":[{\"agenda_title\":\"Introduction to Machine Learning in Healthcare\",\"prompt\":\"Overview of machine learning principles in healthcare, diagram, structured layout\",\"style_tag\":\"diagram\"},{\"agenda_title\":\"Applications of Machine Learning in Clinical Settings\",\"prompt\":\"Examples of machine learning applications in clinical practice, flat, infographic style\",\"style_tag\":\"flat\"},{\"agenda_title\":\"Challenges and Future Directions\",\"prompt\":\"Key challenges and future trends in healthcare machine learning, chalk, mind map\",\"style_tag\":\"chalk\"}],\"duration_minutes\":20,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "Machine Learning in Healthcare"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 3 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Introduction to Machine Learning in Healthcare",
+              "Applications of Machine Learning in Clinical Settings",
+              "Challenges and Future Directions"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Machine Learning in Healthcare' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Introduction to Machine Learning in Healthcare",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Machine Learning in Healthcare' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Introduction to Machine Learning in Healthcare",
+            "layout": "TitleOnly"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Machine Learning in Healthcare' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Introduction to Machine Learning in Healthcare",
+            "layout": "FullImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 4,
+            "prompt": "Overview of machine learning principles in healthcare, diagram, structured layout"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Applications of Machine Learning in Clinical Settings' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Applications of Machine Learning in Clinical Settings",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Applications of Machine Learning in Clinical Settings' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 5,
+            "title": "Applications of Machine Learning in Clinical Settings",
+            "layout": "TwoColumn"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Applications of Machine Learning in Clinical Settings' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 6,
+            "title": "Applications of Machine Learning in Clinical Settings",
+            "layout": "SplitLeftImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 7,
+            "prompt": "Examples of machine learning applications in clinical practice, flat, infographic style"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Challenges and Future Directions' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 7,
+            "title": "Challenges and Future Directions",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Challenges and Future Directions' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 8,
+            "title": "Challenges and Future Directions",
+            "layout": "Quote"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Challenges and Future Directions' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 9,
+            "title": "Challenges and Future Directions",
+            "layout": "SplitRightImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 10,
+            "prompt": "Key challenges and future trends in healthcare machine learning, chalk, mind map"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bullet points to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Definition of machine learning and its relevance to healthcare",
+              "Overview of key machine learning techniques used in the field",
+              "Importance of data quality and availability in healthcare applications"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 5."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 5,
+            "type": "bullets",
+            "items": [
+              "Predictive analytics for patient outcomes and disease progression",
+              "Image analysis in radiology and pathology",
+              "Natural language processing for electronic health records",
+              "Personalized medicine and treatment recommendations"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 8."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 8,
+            "type": "bullets",
+            "items": [
+              "Ethical considerations and patient privacy concerns",
+              "Integration of machine learning systems into existing workflows",
+              "Future trends, including AI-driven diagnostics and telemedicine"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
