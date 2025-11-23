@@ -1,0 +1,377 @@
+{
+  "meta": {
+    "area": "History",
+    "title": "The Byzantine Empire: Continuity and Change",
+    "desc": "Analyzes the cultural and political evolution of the Byzantine Empire from antiquity.",
+    "duration_minutes": 20,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Historical Overview of the Byzantine Empire",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Origins and Establishment",
+            "bullets": [
+              "Foundation of Byzantium",
+              "Constantine and the New Rome",
+              "Key events in early Byzantine history"
+            ]
+          }
+        },
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Key Periods",
+            "bullets": [
+              "Early Byzantine Period",
+              "Middle Byzantine Period",
+              "Late Byzantine Period"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Cultural Continuity and Change",
+      "slides": [
+        {
+          "layout": "TwoColumn",
+          "content": {
+            "left": {
+              "title": "Cultural Influences",
+              "bullets": [
+                "Roman heritage",
+                "Christianity's role",
+                "Hellenistic traditions"
+              ]
+            },
+            "right": {
+              "title": "Cultural Changes",
+              "bullets": [
+                "Rise of Byzantine art",
+                "Literary developments",
+                "Impact of foreign invasions"
+              ]
+            }
+          }
+        },
+        {
+          "layout": "FullImage",
+          "content": {
+            "title": "Byzantine Art",
+            "image": "byzantine_art_example.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Political and Economic Structures",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Political Organization",
+            "bullets": [
+              "Emperor's authority",
+              "Bureaucratic system",
+              "Military structure"
+            ]
+          }
+        },
+        {
+          "layout": "SplitRightImage",
+          "content": {
+            "title": "Economic Systems",
+            "image": "byzantine_economy_chart.jpg",
+            "bullets": [
+              "Trade networks",
+              "Agricultural practices",
+              "Taxation and revenue"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Historical Overview of the Byzantine Empire",
+      "prompt": "Byzantine Empire timeline diagram",
+      "style_tag": "diagram"
+    },
+    {
+      "agenda_title": "Cultural Continuity and Change",
+      "prompt": "Cultural influences in Byzantine art flat",
+      "style_tag": "flat"
+    },
+    {
+      "agenda_title": "Political and Economic Structures",
+      "prompt": "Byzantine political and economic systems diagram",
+      "style_tag": "diagram"
+    }
+  ],
+  "agenda_titles": [
+    "Historical Overview of the Byzantine Empire",
+    "Cultural Continuity and Change",
+    "Political and Economic Structures"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 20-minute English presentation titled 'The Byzantine Empire: Continuity and Change'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"History\",\"topic_desc\":\"Analyzes the cultural and political evolution of the Byzantine Empire from antiquity.\",\"images\":[{\"agenda_title\":\"Historical Overview of the Byzantine Empire\",\"prompt\":\"Byzantine Empire timeline diagram\",\"style_tag\":\"diagram\"},{\"agenda_title\":\"Cultural Continuity and Change\",\"prompt\":\"Cultural influences in Byzantine art flat\",\"style_tag\":\"flat\"},{\"agenda_title\":\"Political and Economic Structures\",\"prompt\":\"Byzantine political and economic systems diagram\",\"style_tag\":\"diagram\"}],\"duration_minutes\":20,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "The Byzantine Empire: Continuity and Change"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 3 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Historical Overview of the Byzantine Empire",
+              "Cultural Continuity and Change",
+              "Political and Economic Structures"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Historical Overview of the Byzantine Empire' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Historical Overview of the Byzantine Empire",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Historical Overview of the Byzantine Empire' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Historical Overview of the Byzantine Empire",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Cultural Continuity and Change' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Cultural Continuity and Change",
+            "layout": "TwoColumn"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Cultural Continuity and Change' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Cultural Continuity and Change",
+            "layout": "FullImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 5,
+            "prompt": "Cultural influences in Byzantine art flat"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Political and Economic Structures' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 5,
+            "title": "Political and Economic Structures",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Political and Economic Structures' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 6,
+            "title": "Political and Economic Structures",
+            "layout": "SplitRightImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 7,
+            "prompt": "Byzantine political and economic systems diagram"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bullet points to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Foundation and establishment in 330 CE",
+              "Key emperors and their contributions",
+              "Territorial expansion and contraction"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bulleted points to slide 4."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 4,
+            "type": "bullets",
+            "items": [
+              "Preservation of Greco-Roman knowledge",
+              "Evolution of Orthodox Christianity",
+              "Impact of art and architecture"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bulleted points to slide 6."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 6,
+            "type": "bullets",
+            "items": [
+              "Centralized governance and bureaucracy",
+              "Role of trade in economic stability",
+              "Military organization and defense strategies"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
