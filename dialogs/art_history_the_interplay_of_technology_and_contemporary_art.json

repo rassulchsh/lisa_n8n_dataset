@@ -1,0 +1,297 @@
+{
+  "meta": {
+    "area": "Art History",
+    "title": "The Interplay of Technology and Contemporary Art",
+    "desc": "Investigates how digital technologies influence artistic creation and dissemination.",
+    "duration_minutes": 5,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Introduction to Technology in Art",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Overview of Technology in Art",
+            "bullets": [
+              "Definition of contemporary art",
+              "Role of technology in art creation",
+              "Impact on audience engagement"
+            ]
+          }
+        },
+        {
+          "layout": "SplitLeftImage",
+          "content": {
+            "title": "Historical Context",
+            "image": "historical_art_technology.jpg",
+            "text": "Evolution of technology in art from traditional methods to digital platforms."
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Case Studies of Technological Integration",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Examples of Technological Integration",
+            "bullets": [
+              "Virtual reality in immersive installations",
+              "AI-generated artworks",
+              "Interactive digital exhibits"
+            ]
+          }
+        },
+        {
+          "layout": "FullImage",
+          "content": {
+            "title": "AI Art",
+            "image": "ai_art_example.jpg",
+            "text": "Showcasing an AI-generated artwork and its implications."
+          }
+        },
+        {
+          "layout": "Quote",
+          "content": {
+            "title": "Expert Insight",
+            "quote": "\"Technology is not just a tool; it transforms the artist's vision.\" - Art Critic"
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Introduction to Technology in Art",
+      "prompt": "Overview of technology's role in contemporary art, flat style, infographic layout",
+      "style_tag": "flat"
+    },
+    {
+      "agenda_title": "Case Studies of Technological Integration",
+      "prompt": "Examples of technology in art projects, diagram style, structured presentation",
+      "style_tag": "diagram"
+    }
+  ],
+  "agenda_titles": [
+    "Introduction to Technology in Art",
+    "Case Studies of Technological Integration"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 5-minute English presentation titled 'The Interplay of Technology and Contemporary Art'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"Art History\",\"topic_desc\":\"Investigates how digital technologies influence artistic creation and dissemination.\",\"images\":[{\"agenda_title\":\"Introduction to Technology in Art\",\"prompt\":\"Overview of technology's role in contemporary art, flat style, infographic layout\",\"style_tag\":\"flat\"},{\"agenda_title\":\"Case Studies of Technological Integration\",\"prompt\":\"Examples of technology in art projects, diagram style, structured presentation\",\"style_tag\":\"diagram\"}],\"duration_minutes\":5,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "The Interplay of Technology and Contemporary Art"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 2 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Introduction to Technology in Art",
+              "Case Studies of Technological Integration"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Technology in Art' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Introduction to Technology in Art",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Technology in Art' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Introduction to Technology in Art",
+            "layout": "SplitLeftImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 3,
+            "prompt": "Overview of technology's role in contemporary art, flat style, infographic layout"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Case Studies of Technological Integration' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Case Studies of Technological Integration",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Case Studies of Technological Integration' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Case Studies of Technological Integration",
+            "layout": "FullImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 5,
+            "prompt": "Examples of technology in art projects, diagram style, structured presentation"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Case Studies of Technological Integration' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 5,
+            "title": "Case Studies of Technological Integration",
+            "layout": "Quote"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Definition of contemporary art",
+              "Role of digital tools in creation",
+              "Impact of technology on artistic expression"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bulleted points to slide 4."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 4,
+            "type": "bullets",
+            "items": [
+              "Virtual reality in immersive installations",
+              "AI-generated artworks and their implications",
+              "Social media as a platform for art dissemination"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
