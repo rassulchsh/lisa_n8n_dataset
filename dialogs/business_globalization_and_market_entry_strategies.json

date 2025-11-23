@@ -1,0 +1,351 @@
+{
+  "meta": {
+    "area": "Business",
+    "title": "Globalization and Market Entry Strategies",
+    "desc": "Evaluates different approaches firms use to enter international markets.",
+    "duration_minutes": 12,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Understanding Globalization",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "What is Globalization?",
+            "bullets": [
+              "Definition and scope",
+              "Economic, cultural, and political dimensions",
+              "Impact on local markets"
+            ]
+          }
+        },
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Drivers of Globalization",
+            "bullets": [
+              "Technological advancements",
+              "Trade liberalization",
+              "Global communication networks"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Market Entry Strategies",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Types of Market Entry Strategies",
+            "bullets": [
+              "Exporting",
+              "Joint ventures",
+              "Wholly owned subsidiaries"
+            ]
+          }
+        },
+        {
+          "layout": "TwoColumn",
+          "content": {
+            "title": "Factors Influencing Market Entry",
+            "left_column": [
+              "Market potential",
+              "Competitive landscape"
+            ],
+            "right_column": [
+              "Regulatory environment",
+              "Cultural considerations"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Case Studies",
+      "slides": [
+        {
+          "layout": "SplitLeftImage",
+          "content": {
+            "title": "Successful Globalization Example",
+            "image": "image_url_1",
+            "text": "Company X's entry into Market Y"
+          }
+        },
+        {
+          "layout": "Quote",
+          "content": {
+            "title": "Lessons Learned",
+            "quote": "Globalization requires adaptability and local insight."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Understanding Globalization",
+      "prompt": "Globalization overview diagram, flat, flowchart composition"
+    },
+    {
+      "agenda_title": "Market Entry Strategies",
+      "prompt": "Market entry strategies types diagram, chalk, structured layout"
+    },
+    {
+      "agenda_title": "Case Studies",
+      "prompt": "Case studies on globalization, photo, collage composition"
+    }
+  ],
+  "agenda_titles": [
+    "Understanding Globalization",
+    "Market Entry Strategies",
+    "Case Studies"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 12-minute English presentation titled 'Globalization and Market Entry Strategies'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"Business\",\"topic_desc\":\"Evaluates different approaches firms use to enter international markets.\",\"images\":[{\"agenda_title\":\"Understanding Globalization\",\"prompt\":\"Globalization overview diagram, flat, flowchart composition\"},{\"agenda_title\":\"Market Entry Strategies\",\"prompt\":\"Market entry strategies types diagram, chalk, structured layout\"},{\"agenda_title\":\"Case Studies\",\"prompt\":\"Case studies on globalization, photo, collage composition\"}],\"duration_minutes\":12,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "Globalization and Market Entry Strategies"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 3 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Understanding Globalization",
+              "Market Entry Strategies",
+              "Case Studies"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Understanding Globalization' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Understanding Globalization",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Understanding Globalization' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Understanding Globalization",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Market Entry Strategies' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Market Entry Strategies",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Market Entry Strategies' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Market Entry Strategies",
+            "layout": "TwoColumn"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Case Studies' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 5,
+            "title": "Case Studies",
+            "layout": "SplitLeftImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 6,
+            "prompt": "Case studies on globalization, photo, collage composition"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Case Studies' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 6,
+            "title": "Case Studies",
+            "layout": "Quote"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bulleted points to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Definition and key concepts of globalization",
+              "Impact on international trade and investment",
+              "Cultural exchange and its implications"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bullet points to slide 4."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 4,
+            "type": "bullets",
+            "items": [
+              "Overview of common strategies: exporting, franchising, joint ventures",
+              "Factors influencing strategy choice: market size, competition",
+              "Risks and benefits associated with each strategy"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bulleted points to slide 6."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 6,
+            "type": "bullets",
+            "items": [
+              "Successful examples of globalization in various sectors",
+              "Analysis of failed market entry attempts",
+              "Lessons learned and best practices"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
