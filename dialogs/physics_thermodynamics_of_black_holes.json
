@@ -1,0 +1,397 @@
+{
+  "meta": {
+    "area": "Physics",
+    "title": "Thermodynamics of Black Holes",
+    "desc": "Examines the laws of thermodynamics as applied to black hole physics and entropy.",
+    "duration_minutes": 20,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Introduction to Black Hole Thermodynamics",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Overview of Black Holes",
+            "bullets": [
+              "Definition of black holes",
+              "Formation processes",
+              "Significance in astrophysics"
+            ]
+          }
+        },
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Basic Concepts",
+            "bullets": [
+              "Event horizon",
+              "Singularity",
+              "Hawking radiation"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Laws of Black Hole Thermodynamics",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "First Law of Black Hole Thermodynamics",
+            "bullets": [
+              "Energy conservation",
+              "Mass-energy equivalence",
+              "Temperature and entropy relations"
+            ]
+          }
+        },
+        {
+          "layout": "TwoColumn",
+          "content": {
+            "left": {
+              "title": "Second Law of Black Hole Thermodynamics",
+              "bullets": [
+                "Entropy increase",
+                "Black hole area theorem"
+              ]
+            },
+            "right": {
+              "title": "Third Law of Black Hole Thermodynamics",
+              "bullets": [
+                "Absolute zero temperature",
+                "Implications for black hole formation"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Applications and Implications",
+      "slides": [
+        {
+          "layout": "SplitLeftImage",
+          "content": {
+            "left": {
+              "title": "Astrophysical Applications",
+              "bullets": [
+                "Understanding galaxy formation",
+                "Gravitational wave detection"
+              ]
+            },
+            "right": {
+              "image": "black_hole_formation_diagram.png"
+            }
+          }
+        },
+        {
+          "layout": "Quote",
+          "content": {
+            "quote": "Black holes are not just cosmic vacuum cleaners; they are critical to our understanding of the universe.",
+            "author": "Stephen Hawking"
+          }
+        },
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Philosophical Implications",
+            "bullets": [
+              "Nature of reality",
+              "Information paradox",
+              "Role in theoretical physics"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Introduction to Black Hole Thermodynamics",
+      "prompt": "Black hole thermodynamics overview diagram",
+      "style_tag": "diagram"
+    },
+    {
+      "agenda_title": "Laws of Black Hole Thermodynamics",
+      "prompt": "Four laws of black hole thermodynamics chalkboard illustration",
+      "style_tag": "chalk"
+    },
+    {
+      "agenda_title": "Applications and Implications",
+      "prompt": "Applications of black hole thermodynamics flat design",
+      "style_tag": "flat"
+    }
+  ],
+  "agenda_titles": [
+    "Introduction to Black Hole Thermodynamics",
+    "Laws of Black Hole Thermodynamics",
+    "Applications and Implications"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 20-minute English presentation titled 'Thermodynamics of Black Holes'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"Physics\",\"topic_desc\":\"Examines the laws of thermodynamics as applied to black hole physics and entropy.\",\"images\":[{\"agenda_title\":\"Introduction to Black Hole Thermodynamics\",\"prompt\":\"Black hole thermodynamics overview diagram\",\"style_tag\":\"diagram\"},{\"agenda_title\":\"Laws of Black Hole Thermodynamics\",\"prompt\":\"Four laws of black hole thermodynamics chalkboard illustration\",\"style_tag\":\"chalk\"},{\"agenda_title\":\"Applications and Implications\",\"prompt\":\"Applications of black hole thermodynamics flat design\",\"style_tag\":\"flat\"}],\"duration_minutes\":20,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "Thermodynamics of Black Holes"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 3 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Introduction to Black Hole Thermodynamics",
+              "Laws of Black Hole Thermodynamics",
+              "Applications and Implications"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Black Hole Thermodynamics' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Introduction to Black Hole Thermodynamics",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Black Hole Thermodynamics' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Introduction to Black Hole Thermodynamics",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Laws of Black Hole Thermodynamics' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Laws of Black Hole Thermodynamics",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Laws of Black Hole Thermodynamics' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Laws of Black Hole Thermodynamics",
+            "layout": "TwoColumn"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Applications and Implications' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 5,
+            "title": "Applications and Implications",
+            "layout": "SplitLeftImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 6,
+            "prompt": "Applications of black hole thermodynamics flat design"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Applications and Implications' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 6,
+            "title": "Applications and Implications",
+            "layout": "Quote"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Applications and Implications' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 7,
+            "title": "Applications and Implications",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Overview of black holes and their properties",
+              "Relation between gravity and thermodynamic laws",
+              "Key concepts: event horizon and singularity"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 4."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 4,
+            "type": "bullets",
+            "items": [
+              "Zeroth law: uniform temperature at event horizon",
+              "First law: energy conservation and mass-energy equivalence",
+              "Second law: entropy increase and black hole area",
+              "Third law: impossibility of reaching absolute zero entropy",
+              "Implications for information paradox and Hawking radiation"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bulleted points to slide 6."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 6,
+            "type": "bullets",
+            "items": [
+              "Understanding cosmic evolution and structure formation",
+              "Role in quantum gravity theories",
+              "Insights into the nature of spacetime and singularities"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
