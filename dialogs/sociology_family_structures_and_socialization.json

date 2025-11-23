@@ -1,0 +1,310 @@
+{
+  "meta": {
+    "area": "Sociology",
+    "title": "Family Structures and Socialization",
+    "desc": "Investigates the role of family in socialization processes and societal norms.",
+    "duration_minutes": 8,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Overview of Family Structures",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Types of Family Structures",
+            "bullets": [
+              "Nuclear Family",
+              "Extended Family",
+              "Single-Parent Family",
+              "Blended Family"
+            ]
+          }
+        },
+        {
+          "layout": "TwoColumn",
+          "content": {
+            "left": {
+              "title": "Characteristics",
+              "bullets": [
+                "Nuclear: Parents and children",
+                "Extended: Includes relatives",
+                "Single-Parent: One parent",
+                "Blended: Step-relationships"
+              ]
+            },
+            "right": {
+              "title": "Prevalence",
+              "bullets": [
+                "Nuclear: Most common in Western societies",
+                "Extended: Common in collectivist cultures",
+                "Single-Parent: Increasing globally",
+                "Blended: Rising due to divorce rates"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Role of Family in Socialization",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Functions of Family in Socialization",
+            "bullets": [
+              "Transmission of Culture",
+              "Emotional Support",
+              "Development of Identity",
+              "Social Norms and Values"
+            ]
+          }
+        },
+        {
+          "layout": "SplitLeftImage",
+          "content": {
+            "left": {
+              "title": "Influence on Behavior",
+              "bullets": [
+                "Modeling behavior",
+                "Reinforcement of norms",
+                "Conflict resolution skills"
+              ]
+            },
+            "right": {
+              "image": "family_socialization_diagram.png"
+            }
+          }
+        },
+        {
+          "layout": "Quote",
+          "content": {
+            "quote": "The family is the first school for children, the first social group.",
+            "author": "Unknown"
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Overview of Family Structures",
+      "prompt": "Family structures overview diagram",
+      "style_tag": "diagram"
+    },
+    {
+      "agenda_title": "Role of Family in Socialization",
+      "prompt": "Family role in socialization chalk drawing",
+      "style_tag": "chalk"
+    }
+  ],
+  "agenda_titles": [
+    "Overview of Family Structures",
+    "Role of Family in Socialization"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 8-minute English presentation titled 'Family Structures and Socialization'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"Sociology\",\"topic_desc\":\"Investigates the role of family in socialization processes and societal norms.\",\"images\":[{\"agenda_title\":\"Overview of Family Structures\",\"prompt\":\"Family structures overview diagram\",\"style_tag\":\"diagram\"},{\"agenda_title\":\"Role of Family in Socialization\",\"prompt\":\"Family role in socialization chalk drawing\",\"style_tag\":\"chalk\"}],\"duration_minutes\":8,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "Family Structures and Socialization"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 2 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Overview of Family Structures",
+              "Role of Family in Socialization"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Overview of Family Structures' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Overview of Family Structures",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Overview of Family Structures' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Overview of Family Structures",
+            "layout": "TwoColumn"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Role of Family in Socialization' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Role of Family in Socialization",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Role of Family in Socialization' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Role of Family in Socialization",
+            "layout": "SplitLeftImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 5,
+            "prompt": "Family role in socialization chalk drawing"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Role of Family in Socialization' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 5,
+            "title": "Role of Family in Socialization",
+            "layout": "Quote"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Definition of family structures",
+              "Types: nuclear, extended, single-parent, blended",
+              "Impact of culture on family forms"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 4."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 4,
+            "type": "bullets",
+            "items": [
+              "Transmission of values and norms",
+              "Influence on identity formation",
+              "Impact of family dynamics on behavior"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
