@@ -1,0 +1,316 @@
+{
+  "meta": {
+    "area": "Biology",
+    "title": "CRISPR-Cas9 Gene Editing",
+    "desc": "Explores the mechanisms and applications of CRISPR technology in genetic modification.",
+    "duration_minutes": 10,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Introduction to CRISPR-Cas9",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Overview of CRISPR-Cas9",
+            "bullets": [
+              "Definition and discovery",
+              "Mechanism of action",
+              "Applications in gene editing"
+            ]
+          }
+        },
+        {
+          "layout": "SplitLeftImage",
+          "content": {
+            "title": "Mechanism of CRISPR-Cas9",
+            "image": "CRISPR_mechanism_diagram.jpg",
+            "text": "How CRISPR-Cas9 targets and edits genes"
+          }
+        },
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Applications of CRISPR-Cas9",
+            "bullets": [
+              "Medical therapies",
+              "Agricultural improvements",
+              "Biotechnology advancements"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Ethical Considerations and Challenges",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Ethical Concerns",
+            "bullets": [
+              "Genetic privacy",
+              "Designer babies",
+              "Biodiversity impact"
+            ]
+          }
+        },
+        {
+          "layout": "Quote",
+          "content": {
+            "title": "Expert Opinions",
+            "quote": "With great power comes great responsibility."
+          }
+        },
+        {
+          "layout": "TwoColumn",
+          "content": {
+            "title": "Challenges in Regulation",
+            "left_column": "Current regulatory frameworks",
+            "right_column": "Need for updated policies"
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Introduction to CRISPR-Cas9",
+      "prompt": "CRISPR-Cas9 mechanism overview diagram",
+      "style_tag": "diagram"
+    },
+    {
+      "agenda_title": "Ethical Considerations and Challenges",
+      "prompt": "Ethical implications of gene editing chalkboard illustration",
+      "style_tag": "chalk"
+    }
+  ],
+  "agenda_titles": [
+    "Introduction to CRISPR-Cas9",
+    "Ethical Considerations and Challenges"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 10-minute English presentation titled 'CRISPR-Cas9 Gene Editing'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"Biology\",\"topic_desc\":\"Explores the mechanisms and applications of CRISPR technology in genetic modification.\",\"images\":[{\"agenda_title\":\"Introduction to CRISPR-Cas9\",\"prompt\":\"CRISPR-Cas9 mechanism overview diagram\",\"style_tag\":\"diagram\"},{\"agenda_title\":\"Ethical Considerations and Challenges\",\"prompt\":\"Ethical implications of gene editing chalkboard illustration\",\"style_tag\":\"chalk\"}],\"duration_minutes\":10,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "CRISPR-Cas9 Gene Editing"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 2 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Introduction to CRISPR-Cas9",
+              "Ethical Considerations and Challenges"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to CRISPR-Cas9' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Introduction to CRISPR-Cas9",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to CRISPR-Cas9' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Introduction to CRISPR-Cas9",
+            "layout": "SplitLeftImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 3,
+            "prompt": "CRISPR-Cas9 mechanism overview diagram"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to CRISPR-Cas9' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Introduction to CRISPR-Cas9",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Ethical Considerations and Challenges' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Ethical Considerations and Challenges",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Ethical Considerations and Challenges' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 5,
+            "title": "Ethical Considerations and Challenges",
+            "layout": "Quote"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Ethical Considerations and Challenges' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 6,
+            "title": "Ethical Considerations and Challenges",
+            "layout": "TwoColumn"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Overview of gene editing technologies",
+              "Discovery of CRISPR in bacteria",
+              "Mechanism of CRISPR-Cas9 action",
+              "Applications in research and medicine"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 5."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 5,
+            "type": "bullets",
+            "items": [
+              "Potential for off-target effects",
+              "Concerns regarding germline editing",
+              "Regulatory landscape and public perception",
+              "Future directions in ethical frameworks"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
