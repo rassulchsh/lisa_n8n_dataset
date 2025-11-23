@@ -1,0 +1,393 @@
+{
+  "meta": {
+    "area": "History",
+    "title": "The Role of Women in World War II",
+    "desc": "Explores women's contributions and changing societal roles during the global conflict.",
+    "duration_minutes": 15,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Introduction to Women's Roles",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Overview of Women's Involvement",
+            "bullets": [
+              "Shift in societal roles",
+              "Entry into workforce",
+              "Military service opportunities"
+            ]
+          }
+        },
+        {
+          "layout": "TitleOnly",
+          "content": {
+            "title": "Historical Context"
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Contributions During the War",
+      "slides": [
+        {
+          "layout": "TwoColumn",
+          "content": {
+            "left": {
+              "title": "Women in the Workforce",
+              "bullets": [
+                "Factory jobs",
+                "Agricultural roles",
+                "Support roles in military"
+              ]
+            },
+            "right": {
+              "title": "Military Contributions",
+              "bullets": [
+                "Nursing corps",
+                "Auxiliary services",
+                "Combat roles"
+              ]
+            }
+          }
+        },
+        {
+          "layout": "SplitLeftImage",
+          "content": {
+            "title": "Iconic Figures",
+            "image": "image_of_iconic_female_figures",
+            "text": "Profiles of women who made significant contributions"
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Post-War Impact and Legacy",
+      "slides": [
+        {
+          "layout": "FullImage",
+          "content": {
+            "title": "Societal Changes",
+            "image": "image_of_post_war_society"
+          }
+        },
+        {
+          "layout": "Quote",
+          "content": {
+            "title": "Reflections on Women's Roles",
+            "quote": "The war changed everything for women."
+          }
+        },
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Long-term Effects",
+            "bullets": [
+              "Increased workforce participation",
+              "Advancements in rights",
+              "Cultural shifts in gender roles"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Introduction to Women's Roles",
+      "prompt": "Overview of women's roles in WWII, diagram, split composition",
+      "style_tag": "diagram"
+    },
+    {
+      "agenda_title": "Contributions During the War",
+      "prompt": "Key contributions of women in WWII, flat style, full image",
+      "style_tag": "flat"
+    },
+    {
+      "agenda_title": "Post-War Impact and Legacy",
+      "prompt": "Impact of women's roles post-WWII, chalk style, diagram composition",
+      "style_tag": "chalk"
+    }
+  ],
+  "agenda_titles": [
+    "Introduction to Women's Roles",
+    "Contributions During the War",
+    "Post-War Impact and Legacy"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 15-minute English presentation titled 'The Role of Women in World War II'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"History\",\"topic_desc\":\"Explores women's contributions and changing societal roles during the global conflict.\",\"images\":[{\"agenda_title\":\"Introduction to Women's Roles\",\"prompt\":\"Overview of women's roles in WWII, diagram, split composition\",\"style_tag\":\"diagram\"},{\"agenda_title\":\"Contributions During the War\",\"prompt\":\"Key contributions of women in WWII, flat style, full image\",\"style_tag\":\"flat\"},{\"agenda_title\":\"Post-War Impact and Legacy\",\"prompt\":\"Impact of women's roles post-WWII, chalk style, diagram composition\",\"style_tag\":\"chalk\"}],\"duration_minutes\":15,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "The Role of Women in World War II"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 3 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Introduction to Women's Roles",
+              "Contributions During the War",
+              "Post-War Impact and Legacy"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Women's Roles' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Introduction to Women's Roles",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Women's Roles' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Introduction to Women's Roles",
+            "layout": "TitleOnly"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Contributions During the War' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Contributions During the War",
+            "layout": "TwoColumn"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Contributions During the War' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Contributions During the War",
+            "layout": "SplitLeftImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 5,
+            "prompt": "Key contributions of women in WWII, flat style, full image"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Post-War Impact and Legacy' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 5,
+            "title": "Post-War Impact and Legacy",
+            "layout": "FullImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 6,
+            "prompt": "Impact of women's roles post-WWII, chalk style, diagram composition"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Post-War Impact and Legacy' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 6,
+            "title": "Post-War Impact and Legacy",
+            "layout": "Quote"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Post-War Impact and Legacy' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 7,
+            "title": "Post-War Impact and Legacy",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Overview of societal norms pre-war",
+              "Initial resistance to women in workforce",
+              "Emergence of women in various sectors"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bulleted points to slide 4."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 4,
+            "type": "bullets",
+            "items": [
+              "Women in military roles, including WAC and WAVES",
+              "Involvement in munitions and manufacturing industries",
+              "Impact on agricultural production through programs like WLA"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bulleted points to slide 8."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 8,
+            "type": "bullets",
+            "items": [
+              "Shifts in gender roles and expectations",
+              "Influence on future women's rights movements",
+              "Long-term effects on workforce participation"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
