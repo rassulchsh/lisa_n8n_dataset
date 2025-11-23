@@ -1,0 +1,403 @@
+{
+  "meta": {
+    "area": "Art History",
+    "title": "Postmodernism and the Deconstruction of Artistic Authority",
+    "desc": "Examines how postmodernism challenges traditional notions of authorship and originality.",
+    "duration_minutes": 10,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Introduction to Postmodernism",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Defining Postmodernism",
+            "bullets": [
+              "Characteristics of postmodern thought",
+              "Historical context",
+              "Influence on art and culture"
+            ]
+          }
+        },
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Key Theorists",
+            "bullets": [
+              "Jean-François Lyotard",
+              "Jacques Derrida",
+              "Michel Foucault"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Deconstruction of Artistic Authority",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Concept of Deconstruction",
+            "bullets": [
+              "Origin in literary theory",
+              "Application to visual arts",
+              "Challenge to traditional hierarchies"
+            ]
+          }
+        },
+        {
+          "layout": "Quote",
+          "content": {
+            "title": "Derrida on Deconstruction",
+            "quote": "\"There is nothing outside the text.\""
+          }
+        },
+        {
+          "layout": "TwoColumn",
+          "content": {
+            "left": {
+              "title": "Impact on Artists",
+              "bullets": [
+                "Reevaluation of authorship",
+                "Collaboration and collective creation"
+              ]
+            },
+            "right": {
+              "title": "Audience Reception",
+              "bullets": [
+                "Active participation",
+                "Interpretative freedom"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Case Studies",
+      "slides": [
+        {
+          "layout": "SplitLeftImage",
+          "content": {
+            "left": {
+              "title": "Marcel Duchamp's 'Fountain'",
+              "bullets": [
+                "Challenge to traditional art",
+                "Conceptual vs. aesthetic value"
+              ]
+            },
+            "right": {
+              "image": "duchamp_fountain.jpg"
+            }
+          }
+        },
+        {
+          "layout": "FullImage",
+          "content": {
+            "title": "Banksy's Street Art",
+            "image": "banksy_art.jpg"
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Introduction to Postmodernism",
+      "prompt": "Overview of postmodernism concepts, diagram, flowchart layout",
+      "style_tag": "diagram"
+    },
+    {
+      "agenda_title": "Deconstruction of Artistic Authority",
+      "prompt": "Analysis of artistic authority deconstruction, chalk, mind map composition",
+      "style_tag": "chalk"
+    },
+    {
+      "agenda_title": "Case Studies",
+      "prompt": "Examples of postmodern art and authority, flat, grid layout",
+      "style_tag": "flat"
+    }
+  ],
+  "agenda_titles": [
+    "Introduction to Postmodernism",
+    "Deconstruction of Artistic Authority",
+    "Case Studies"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 10-minute English presentation titled 'Postmodernism and the Deconstruction of Artistic Authority'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"Art History\",\"topic_desc\":\"Examines how postmodernism challenges traditional notions of authorship and originality.\",\"images\":[{\"agenda_title\":\"Introduction to Postmodernism\",\"prompt\":\"Overview of postmodernism concepts, diagram, flowchart layout\",\"style_tag\":\"diagram\"},{\"agenda_title\":\"Deconstruction of Artistic Authority\",\"prompt\":\"Analysis of artistic authority deconstruction, chalk, mind map composition\",\"style_tag\":\"chalk\"},{\"agenda_title\":\"Case Studies\",\"prompt\":\"Examples of postmodern art and authority, flat, grid layout\",\"style_tag\":\"flat\"}],\"duration_minutes\":10,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "Postmodernism and the Deconstruction of Artistic Authority"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 3 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Introduction to Postmodernism",
+              "Deconstruction of Artistic Authority",
+              "Case Studies"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Postmodernism' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Introduction to Postmodernism",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Postmodernism' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Introduction to Postmodernism",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Deconstruction of Artistic Authority' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Deconstruction of Artistic Authority",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Deconstruction of Artistic Authority' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Deconstruction of Artistic Authority",
+            "layout": "Quote"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Deconstruction of Artistic Authority' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 5,
+            "title": "Deconstruction of Artistic Authority",
+            "layout": "TwoColumn"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Case Studies' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 6,
+            "title": "Case Studies",
+            "layout": "SplitLeftImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 7,
+            "prompt": "Examples of postmodern art and authority, flat, grid layout"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Case Studies' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 7,
+            "title": "Case Studies",
+            "layout": "FullImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 8,
+            "prompt": "Examples of postmodern art and authority, flat, grid layout"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Definition and historical context",
+              "Key characteristics of postmodern thought",
+              "Influence on various disciplines"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 4."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 4,
+            "type": "bullets",
+            "items": [
+              "Challenging traditional notions of authorship",
+              "Impact of technology on art creation",
+              "Role of audience interpretation in meaning"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bullet points to slide 7."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 7,
+            "type": "bullets",
+            "items": [
+              "Examples from literature and visual arts",
+              "Analysis of specific artists and movements",
+              "Implications for contemporary art practices"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
