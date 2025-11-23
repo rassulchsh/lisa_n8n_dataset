@@ -1,0 +1,397 @@
+{
+  "meta": {
+    "area": "Physics",
+    "title": "Chaos Theory in Physics",
+    "desc": "Explores deterministic systems that exhibit unpredictable behavior due to sensitivity to initial conditions.",
+    "duration_minutes": 20,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Introduction to Chaos Theory",
+      "slides": [
+        {
+          "layout": "TitleBullets"
+        },
+        {
+          "layout": "TitleOnly"
+        },
+        {
+          "layout": "SplitLeftImage"
+        }
+      ]
+    },
+    {
+      "agenda_title": "Mathematical Foundations",
+      "slides": [
+        {
+          "layout": "TitleBullets"
+        },
+        {
+          "layout": "TwoColumn"
+        },
+        {
+          "layout": "Quote"
+        }
+      ]
+    },
+    {
+      "agenda_title": "Applications of Chaos Theory",
+      "slides": [
+        {
+          "layout": "TitleBullets"
+        },
+        {
+          "layout": "SplitRightImage"
+        },
+        {
+          "layout": "FullImage"
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Introduction to Chaos Theory",
+      "prompt": "Overview of chaos theory concepts, diagram, clear layout",
+      "style_tag": "diagram"
+    },
+    {
+      "agenda_title": "Mathematical Foundations",
+      "prompt": "Key equations in chaos theory, chalkboard style, organized presentation",
+      "style_tag": "chalk"
+    },
+    {
+      "agenda_title": "Applications of Chaos Theory",
+      "prompt": "Real-world applications of chaos theory, flat design, informative layout",
+      "style_tag": "flat"
+    }
+  ],
+  "agenda_titles": [
+    "Introduction to Chaos Theory",
+    "Mathematical Foundations",
+    "Applications of Chaos Theory"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 20-minute English presentation titled 'Chaos Theory in Physics'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"Physics\",\"topic_desc\":\"Explores deterministic systems that exhibit unpredictable behavior due to sensitivity to initial conditions.\",\"images\":[{\"agenda_title\":\"Introduction to Chaos Theory\",\"prompt\":\"Overview of chaos theory concepts, diagram, clear layout\",\"style_tag\":\"diagram\"},{\"agenda_title\":\"Mathematical Foundations\",\"prompt\":\"Key equations in chaos theory, chalkboard style, organized presentation\",\"style_tag\":\"chalk\"},{\"agenda_title\":\"Applications of Chaos Theory\",\"prompt\":\"Real-world applications of chaos theory, flat design, informative layout\",\"style_tag\":\"flat\"}],\"duration_minutes\":20,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "Chaos Theory in Physics"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 3 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Introduction to Chaos Theory",
+              "Mathematical Foundations",
+              "Applications of Chaos Theory"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Chaos Theory' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Introduction to Chaos Theory",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Chaos Theory' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Introduction to Chaos Theory",
+            "layout": "TitleOnly"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Chaos Theory' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Introduction to Chaos Theory",
+            "layout": "SplitLeftImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 4,
+            "prompt": "Overview of chaos theory concepts, diagram, clear layout"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Mathematical Foundations' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Mathematical Foundations",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Mathematical Foundations' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 5,
+            "title": "Mathematical Foundations",
+            "layout": "TwoColumn"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Mathematical Foundations' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 6,
+            "title": "Mathematical Foundations",
+            "layout": "Quote"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Applications of Chaos Theory' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 7,
+            "title": "Applications of Chaos Theory",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Applications of Chaos Theory' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 8,
+            "title": "Applications of Chaos Theory",
+            "layout": "SplitRightImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 9,
+            "prompt": "Real-world applications of chaos theory, flat design, informative layout"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Applications of Chaos Theory' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 9,
+            "title": "Applications of Chaos Theory",
+            "layout": "FullImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 10,
+            "prompt": "Real-world applications of chaos theory, flat design, informative layout"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bullet points to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Definition of chaos in physical systems",
+              "Historical context and key figures",
+              "Importance of initial conditions in chaotic systems"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bullet points to slide 5."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 5,
+            "type": "bullets",
+            "items": [
+              "Nonlinear dynamics and differential equations",
+              "Fractals and their role in chaos",
+              "Lyapunov exponents as a measure of chaos"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 8."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 8,
+            "type": "bullets",
+            "items": [
+              "Weather prediction and climate models",
+              "Population dynamics in ecology",
+              "Financial markets and economic systems"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
