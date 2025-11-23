@@ -1,0 +1,306 @@
+{
+  "meta": {
+    "area": "Computer Science",
+    "title": "Distributed Systems and Fault Tolerance",
+    "desc": "Studies design principles for distributed systems ensuring reliability and fault tolerance.",
+    "duration_minutes": 8,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Introduction to Distributed Systems",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Overview of Distributed Systems",
+            "bullets": [
+              "Definition and Characteristics",
+              "Types of Distributed Systems",
+              "Applications and Use Cases"
+            ]
+          }
+        },
+        {
+          "layout": "TwoColumn",
+          "content": {
+            "left": {
+              "title": "Key Components",
+              "bullets": [
+                "Nodes",
+                "Network",
+                "Middleware"
+              ]
+            },
+            "right": {
+              "title": "Challenges",
+              "bullets": [
+                "Scalability",
+                "Latency",
+                "Security"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Fault Tolerance Mechanisms",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Importance of Fault Tolerance",
+            "bullets": [
+              "Ensures System Reliability",
+              "Minimizes Downtime",
+              "Enhances User Experience"
+            ]
+          }
+        },
+        {
+          "layout": "SplitLeftImage",
+          "content": {
+            "left": {
+              "title": "Techniques",
+              "bullets": [
+                "Redundancy",
+                "Replication",
+                "Checkpointing"
+              ]
+            },
+            "right": {
+              "image": "fault_tolerance_diagram.png"
+            }
+          }
+        },
+        {
+          "layout": "Quote",
+          "content": {
+            "quote": "Fault tolerance is the ability of a system to continue operating properly in the event of the failure of some of its components.",
+            "author": "Wikipedia"
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Introduction to Distributed Systems",
+      "prompt": "Overview of distributed systems architecture, diagram, structured layout",
+      "style_tag": "diagram"
+    },
+    {
+      "agenda_title": "Fault Tolerance Mechanisms",
+      "prompt": "Illustration of fault tolerance strategies, diagram, clear flow",
+      "style_tag": "diagram"
+    }
+  ],
+  "agenda_titles": [
+    "Introduction to Distributed Systems",
+    "Fault Tolerance Mechanisms"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 8-minute English presentation titled 'Distributed Systems and Fault Tolerance'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"Computer Science\",\"topic_desc\":\"Studies design principles for distributed systems ensuring reliability and fault tolerance.\",\"images\":[{\"agenda_title\":\"Introduction to Distributed Systems\",\"prompt\":\"Overview of distributed systems architecture, diagram, structured layout\",\"style_tag\":\"diagram\"},{\"agenda_title\":\"Fault Tolerance Mechanisms\",\"prompt\":\"Illustration of fault tolerance strategies, diagram, clear flow\",\"style_tag\":\"diagram\"}],\"duration_minutes\":8,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "Distributed Systems and Fault Tolerance"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 2 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Introduction to Distributed Systems",
+              "Fault Tolerance Mechanisms"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Distributed Systems' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Introduction to Distributed Systems",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Distributed Systems' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Introduction to Distributed Systems",
+            "layout": "TwoColumn"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Fault Tolerance Mechanisms' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Fault Tolerance Mechanisms",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Fault Tolerance Mechanisms' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Fault Tolerance Mechanisms",
+            "layout": "SplitLeftImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 5,
+            "prompt": "Illustration of fault tolerance strategies, diagram, clear flow"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Fault Tolerance Mechanisms' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 5,
+            "title": "Fault Tolerance Mechanisms",
+            "layout": "Quote"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Definition and key characteristics",
+              "Types of distributed systems",
+              "Challenges in design and implementation"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bullet points to slide 4."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 4,
+            "type": "bullets",
+            "items": [
+              "Redundancy and replication strategies",
+              "Error detection and recovery methods",
+              "Consensus algorithms for reliability"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
