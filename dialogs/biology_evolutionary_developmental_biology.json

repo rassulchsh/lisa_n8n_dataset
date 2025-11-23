@@ -1,0 +1,288 @@
+{
+  "meta": {
+    "area": "Biology",
+    "title": "Evolutionary Developmental Biology",
+    "desc": "Explores the relationship between evolutionary processes and developmental mechanisms.",
+    "duration_minutes": 8,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Introduction to Evolutionary Developmental Biology",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "What is Evolutionary Developmental Biology?",
+            "bullets": [
+              "Integration of evolutionary and developmental biology",
+              "Focus on how developmental processes evolve",
+              "Importance of genetic and environmental factors"
+            ]
+          }
+        },
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Historical Context",
+            "bullets": [
+              "Origins in the 19th century",
+              "Key figures: Ernst Haeckel, Richard Owen",
+              "Modern synthesis and its implications"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Key Concepts and Mechanisms",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Core Concepts",
+            "bullets": [
+              "Homology and analogy",
+              "Developmental pathways and evolution",
+              "Evo-devo frameworks"
+            ]
+          }
+        },
+        {
+          "layout": "SplitRightImage",
+          "content": {
+            "title": "Mechanisms of Evolutionary Change",
+            "image": "image_url_here",
+            "text": "Gene regulatory networks and their role in morphogenesis"
+          }
+        },
+        {
+          "layout": "Quote",
+          "content": {
+            "title": "Key Insight",
+            "quote": "Development is the bridge between evolution and ecology."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Introduction to Evolutionary Developmental Biology",
+      "prompt": "Overview of evolutionary developmental biology concepts, diagram, flowchart composition",
+      "style_tag": "diagram"
+    },
+    {
+      "agenda_title": "Key Concepts and Mechanisms",
+      "prompt": "Mechanisms of evolution and development, flat design, infographic layout",
+      "style_tag": "flat"
+    }
+  ],
+  "agenda_titles": [
+    "Introduction to Evolutionary Developmental Biology",
+    "Key Concepts and Mechanisms"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 8-minute English presentation titled 'Evolutionary Developmental Biology'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"Biology\",\"topic_desc\":\"Explores the relationship between evolutionary processes and developmental mechanisms.\",\"images\":[{\"agenda_title\":\"Introduction to Evolutionary Developmental Biology\",\"prompt\":\"Overview of evolutionary developmental biology concepts, diagram, flowchart composition\",\"style_tag\":\"diagram\"},{\"agenda_title\":\"Key Concepts and Mechanisms\",\"prompt\":\"Mechanisms of evolution and development, flat design, infographic layout\",\"style_tag\":\"flat\"}],\"duration_minutes\":8,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "Evolutionary Developmental Biology"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 2 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Introduction to Evolutionary Developmental Biology",
+              "Key Concepts and Mechanisms"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Evolutionary Developmental Biology' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Introduction to Evolutionary Developmental Biology",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Evolutionary Developmental Biology' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Introduction to Evolutionary Developmental Biology",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Key Concepts and Mechanisms' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Key Concepts and Mechanisms",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Key Concepts and Mechanisms' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Key Concepts and Mechanisms",
+            "layout": "SplitRightImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 5,
+            "prompt": "Mechanisms of evolution and development, flat design, infographic layout"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Key Concepts and Mechanisms' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 5,
+            "title": "Key Concepts and Mechanisms",
+            "layout": "Quote"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Definition and scope of the field",
+              "Historical context and key milestones",
+              "Importance of integrating evolution and development"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bullet points to slide 4."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 4,
+            "type": "bullets",
+            "items": [
+              "Role of genetic regulation in development",
+              "Evolution of developmental pathways",
+              "Case studies illustrating evolutionary changes"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
