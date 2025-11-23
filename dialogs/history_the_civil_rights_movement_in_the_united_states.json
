@@ -1,0 +1,281 @@
+{
+  "meta": {
+    "area": "History",
+    "title": "The Civil Rights Movement in the United States",
+    "desc": "Focuses on key events and figures that shaped the struggle for racial equality.",
+    "duration_minutes": 8,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Historical Context",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "title": "Background of the Civil Rights Movement",
+          "bullets": [
+            "Post-Civil War Reconstruction",
+            "Jim Crow Laws and Segregation",
+            "Emergence of Racial Tensions"
+          ]
+        },
+        {
+          "layout": "TwoColumn",
+          "title": "Key Influences",
+          "left_column": [
+            "World War II Impact",
+            "Civil Rights Organizations"
+          ],
+          "right_column": [
+            "Global Decolonization",
+            "Religious Leaders' Roles"
+          ]
+        }
+      ]
+    },
+    {
+      "agenda_title": "Key Events and Figures",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "title": "Major Events",
+          "bullets": [
+            "Brown v. Board of Education (1954)",
+            "Montgomery Bus Boycott (1955)",
+            "March on Washington (1963)"
+          ]
+        },
+        {
+          "layout": "SplitLeftImage",
+          "title": "Prominent Figures",
+          "image": "image_of_martin_luther_king.jpg",
+          "text": "Martin Luther King Jr.: Leader of nonviolent protests."
+        },
+        {
+          "layout": "Quote",
+          "title": "Inspirational Quotes",
+          "quote": "Injustice anywhere is a threat to justice everywhere. - Martin Luther King Jr."
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Historical Context",
+      "prompt": "Civil Rights Movement timeline diagram",
+      "style_tag": "diagram"
+    },
+    {
+      "agenda_title": "Key Events and Figures",
+      "prompt": "Notable leaders and events in Civil Rights Movement flat illustration",
+      "style_tag": "flat"
+    }
+  ],
+  "agenda_titles": [
+    "Historical Context",
+    "Key Events and Figures"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 8-minute English presentation titled 'The Civil Rights Movement in the United States'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"History\",\"topic_desc\":\"Focuses on key events and figures that shaped the struggle for racial equality.\",\"images\":[{\"agenda_title\":\"Historical Context\",\"prompt\":\"Civil Rights Movement timeline diagram\",\"style_tag\":\"diagram\"},{\"agenda_title\":\"Key Events and Figures\",\"prompt\":\"Notable leaders and events in Civil Rights Movement flat illustration\",\"style_tag\":\"flat\"}],\"duration_minutes\":8,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "The Civil Rights Movement in the United States"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 2 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Historical Context",
+              "Key Events and Figures"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Historical Context' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Historical Context",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Historical Context' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Historical Context",
+            "layout": "TwoColumn"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Key Events and Figures' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Key Events and Figures",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Key Events and Figures' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Key Events and Figures",
+            "layout": "SplitLeftImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 5,
+            "prompt": "Notable leaders and events in Civil Rights Movement flat illustration"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Key Events and Figures' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 5,
+            "title": "Key Events and Figures",
+            "layout": "Quote"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bullet points to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Post-Civil War amendments and their impact.",
+              "Jim Crow laws and racial segregation.",
+              "Emergence of grassroots organizations."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 4."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 4,
+            "type": "bullets",
+            "items": [
+              "Montgomery Bus Boycott and Rosa Parks.",
+              "March on Washington and Martin Luther King Jr.",
+              "Civil Rights Act of 1964 and Voting Rights Act of 1965."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
