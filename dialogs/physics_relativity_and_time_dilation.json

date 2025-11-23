@@ -1,0 +1,315 @@
+{
+  "meta": {
+    "area": "Physics",
+    "title": "Relativity and Time Dilation",
+    "desc": "Investigates the effects of relative motion on the perception of time in Einstein's theory.",
+    "duration_minutes": 8,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Introduction to Relativity",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Overview of Relativity",
+            "bullets": [
+              "Developed by Albert Einstein",
+              "Two main theories: Special and General Relativity",
+              "Fundamental concepts: Space and time are interwoven"
+            ]
+          }
+        },
+        {
+          "layout": "TwoColumn",
+          "content": {
+            "left": {
+              "title": "Special Relativity",
+              "bullets": [
+                "Applies to observers in uniform motion",
+                "Key postulates: Speed of light is constant"
+              ]
+            },
+            "right": {
+              "title": "General Relativity",
+              "bullets": [
+                "Incorporates acceleration and gravity",
+                "Describes gravity as curvature of spacetime"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Understanding Time Dilation",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Concept of Time Dilation",
+            "bullets": [
+              "Time is relative, varies with speed",
+              "Faster speeds result in slower time passage",
+              "Illustrated by twin paradox"
+            ]
+          }
+        },
+        {
+          "layout": "SplitLeftImage",
+          "content": {
+            "left": {
+              "title": "Twin Paradox Explanation",
+              "bullets": [
+                "One twin travels at high speed",
+                "Returns younger than stationary twin"
+              ]
+            },
+            "right": {
+              "image": "twin_paradox_diagram.jpg"
+            }
+          }
+        },
+        {
+          "layout": "FullImage",
+          "content": {
+            "image": "time_dilation_graph.png",
+            "caption": "Graphical representation of time dilation effect"
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Introduction to Relativity",
+      "prompt": "Overview of relativity concepts, diagram, clear layout",
+      "style_tag": "diagram"
+    },
+    {
+      "agenda_title": "Understanding Time Dilation",
+      "prompt": "Illustration of time dilation effects, chalk, simple composition",
+      "style_tag": "chalk"
+    }
+  ],
+  "agenda_titles": [
+    "Introduction to Relativity",
+    "Understanding Time Dilation"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 8-minute English presentation titled 'Relativity and Time Dilation'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"Physics\",\"topic_desc\":\"Investigates the effects of relative motion on the perception of time in Einstein's theory.\",\"images\":[{\"agenda_title\":\"Introduction to Relativity\",\"prompt\":\"Overview of relativity concepts, diagram, clear layout\",\"style_tag\":\"diagram\"},{\"agenda_title\":\"Understanding Time Dilation\",\"prompt\":\"Illustration of time dilation effects, chalk, simple composition\",\"style_tag\":\"chalk\"}],\"duration_minutes\":8,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "Relativity and Time Dilation"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 2 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Introduction to Relativity",
+              "Understanding Time Dilation"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Relativity' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Introduction to Relativity",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Introduction to Relativity' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Introduction to Relativity",
+            "layout": "TwoColumn"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Understanding Time Dilation' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Understanding Time Dilation",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Understanding Time Dilation' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Understanding Time Dilation",
+            "layout": "SplitLeftImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 5,
+            "prompt": "Illustration of time dilation effects, chalk, simple composition"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Understanding Time Dilation' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 5,
+            "title": "Understanding Time Dilation",
+            "layout": "FullImage"
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_image",
+          "args": {
+            "slide_no": 6,
+            "prompt": "Illustration of time dilation effects, chalk, simple composition"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bullet points to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Overview of Einstein's theories",
+              "Key concepts: space and time",
+              "Importance of the speed of light"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 4."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 4,
+            "type": "bullets",
+            "items": [
+              "Definition and implications of time dilation",
+              "Effects of relative velocity on time perception",
+              "Experimental evidence: Hafele-Keating experiment"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
