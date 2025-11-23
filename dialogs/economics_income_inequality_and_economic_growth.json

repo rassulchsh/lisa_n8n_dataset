@@ -1,0 +1,374 @@
+{
+  "meta": {
+    "area": "Economics",
+    "title": "Income Inequality and Economic Growth",
+    "desc": "Investigates the relationship between income disparity and overall economic performance.",
+    "duration_minutes": 15,
+    "planner_source": "n8n_v2_github"
+  },
+  "plan": [
+    {
+      "agenda_title": "Understanding Income Inequality",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Definition of Income Inequality",
+            "bullets": [
+              "Disparity in income distribution",
+              "Measurement metrics: Gini coefficient, income quintiles",
+              "Global and regional variations"
+            ]
+          }
+        },
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Causes of Income Inequality",
+            "bullets": [
+              "Economic factors: globalization, technology",
+              "Social factors: education, discrimination",
+              "Policy factors: taxation, labor laws"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Impact on Economic Growth",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Positive Effects",
+            "bullets": [
+              "Incentives for innovation and entrepreneurship",
+              "Capital accumulation in wealthier segments"
+            ]
+          }
+        },
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Negative Effects",
+            "bullets": [
+              "Reduced social mobility",
+              "Potential for economic instability",
+              "Lower overall demand in the economy"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "agenda_title": "Policy Responses and Solutions",
+      "slides": [
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Redistributive Policies",
+            "bullets": [
+              "Progressive taxation",
+              "Social safety nets",
+              "Universal basic income proposals"
+            ]
+          }
+        },
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Education and Training",
+            "bullets": [
+              "Investment in education",
+              "Vocational training programs",
+              "Lifelong learning initiatives"
+            ]
+          }
+        },
+        {
+          "layout": "TitleBullets",
+          "content": {
+            "title": "Regulatory Measures",
+            "bullets": [
+              "Minimum wage laws",
+              "Labor rights protections",
+              "Corporate accountability"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "agenda_title": "Understanding Income Inequality",
+      "prompt": "Income distribution overview diagram, flat, infographic layout",
+      "style_tag": "flat"
+    },
+    {
+      "agenda_title": "Impact on Economic Growth",
+      "prompt": "Graph showing correlation between income inequality and economic growth, diagram, clear axes",
+      "style_tag": "diagram"
+    },
+    {
+      "agenda_title": "Policy Responses and Solutions",
+      "prompt": "Flowchart of policy options to address income inequality, chalk, structured layout",
+      "style_tag": "chalk"
+    }
+  ],
+  "agenda_titles": [
+    "Understanding Income Inequality",
+    "Impact on Economic Growth",
+    "Policy Responses and Solutions"
+  ],
+  "dialog": [
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a 15-minute English presentation titled 'Income Inequality and Economic Growth'."
+    },
+    {
+      "role": "assistant",
+      "analysis": "{\"area\":\"Economics\",\"topic_desc\":\"Investigates the relationship between income disparity and overall economic performance.\",\"images\":[{\"agenda_title\":\"Understanding Income Inequality\",\"prompt\":\"Income distribution overview diagram, flat, infographic layout\",\"style_tag\":\"flat\"},{\"agenda_title\":\"Impact on Economic Growth\",\"prompt\":\"Graph showing correlation between income inequality and economic growth, diagram, clear axes\",\"style_tag\":\"diagram\"},{\"agenda_title\":\"Policy Responses and Solutions\",\"prompt\":\"Flowchart of policy options to address income inequality, chalk, structured layout\",\"style_tag\":\"chalk\"}],\"duration_minutes\":15,\"planner_version\":\"v2\"}"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "create_presentation",
+          "args": {
+            "language": "en",
+            "template": "Minimal",
+            "title": "Income Inequality and Economic Growth"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Set the agenda with 3 items."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "set_agenda",
+          "args": {
+            "items": [
+              "Understanding Income Inequality",
+              "Impact on Economic Growth",
+              "Policy Responses and Solutions"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Understanding Income Inequality' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 1,
+            "title": "Understanding Income Inequality",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Understanding Income Inequality' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 2,
+            "title": "Understanding Income Inequality",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Impact on Economic Growth' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 3,
+            "title": "Impact on Economic Growth",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Impact on Economic Growth' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 4,
+            "title": "Impact on Economic Growth",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Policy Responses and Solutions' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 5,
+            "title": "Policy Responses and Solutions",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Policy Responses and Solutions' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 6,
+            "title": "Policy Responses and Solutions",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Create a slide titled 'Policy Responses and Solutions' using a suitable layout."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "insert_slide_after",
+          "args": {
+            "after_slide_no": 7,
+            "title": "Policy Responses and Solutions",
+            "layout": "TitleBullets"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 2."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 2,
+            "type": "bullets",
+            "items": [
+              "Definition and measurement of income inequality",
+              "Historical trends in income distribution",
+              "Factors contributing to income inequality"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add bullet points to slide 4."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 4,
+            "type": "bullets",
+            "items": [
+              "Correlation between income inequality and GDP growth",
+              "Effects on consumer spending and investment",
+              "Long-term implications for social stability and economic mobility"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Add a bullet list to slide 6."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "edit_content",
+          "args": {
+            "slide_no": 6,
+            "type": "bullets",
+            "items": [
+              "Progressive taxation and redistribution mechanisms",
+              "Investment in education and skill development",
+              "Role of social safety nets and welfare programs"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "lang": "en",
+      "text": "Show the slide index."
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "name": "get_slide_index",
+          "args": {}
+        }
+      ]
+    }
+  ]
+}
